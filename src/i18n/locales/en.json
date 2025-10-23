@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "We provide effective and reliable solutions",
+    "subtitle": "constructing services",
+    "getStarted": "Get Started",
+    "explore": "Explore"
+  },
+  "stats": {
+    "projects": "Projects",
+    "clients": "Clients",
+    "staff": "Staffs",
+    "satisfaction": "Satisfaction"
+  },
+  "services": {
+    "title": "A comprehensive set of services",
+    "subtitle": "Services",
+    "planning": "Project Planning",
+    "planningDesc": "Strategic planning and project management for successful construction execution.",
+    "contracting": "General Contracting",
+    "contractingDesc": "Complete contracting services from foundation to final touches.",
+    "renovation": "Renovations",
+    "renovationDesc": "Transform existing spaces with our expert renovation services.",
+    "infrastructure": "Infrastructure Projects",
+    "infrastructureDesc": "Large-scale infrastructure development and civil engineering projects.",
+    "learnMore": "Learn More"
+  },
+  "team": {
+    "title": "Meet our reliable and efficient contractors",
+    "subtitle": "A team of reliable and experienced contractors"
+  },
+  "quality": {
+    "title": "An exceptional quality that can't be beaten",
+    "description": "We deliver projects with unmatched quality, precision, and attention to detail. Our commitment to excellence ensures every construction meets the highest standards."
+  },
+  "cta": {
+    "title": "Ready to pull the trigger? Get a quote today",
+    "button": "Get Quote",
+    "contact": "Contact Us"
+  },
+  "projects": {
+    "title": "Take a look at our most recent project",
+    "subtitle": "Latest Projects",
+    "viewAll": "View All Projects"
+  },
+  "testimonials": {
+    "title": "What our clients say about us",
+    "subtitle": "Testimonials"
+  },
+  "news": {
+    "title": "Latest News & articles",
+    "subtitle": "News & Articles",
+    "readMore": "Read More"
+  },
+  "footer": {
+    "tagline": "Building tomorrow, today",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "info": "Contact Information",
+    "office": "Office Address"
+  },
+  "about": {
+    "title": "About ConstructlyX",
+    "mission": "Our Mission",
+    "missionText": "To deliver exceptional construction solutions that exceed expectations and build lasting relationships with our clients.",
+    "vision": "Our Vision",
+    "visionText": "To be the most trusted and innovative construction company, setting new standards in quality and sustainability.",
+    "values": "Our Values",
+    "timeline": "Company Growth Timeline"
+  }
+}

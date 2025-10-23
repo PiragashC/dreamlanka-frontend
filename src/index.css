@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+    
+    --primary: 45 98% 53%;
+    --primary-foreground: 0 0% 0%;
+    
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 4%;
+    
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 33%;
+    
+    --accent: 0 0% 97%;
+    --accent-foreground: 0 0% 4%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 98% 53%;
+    
+    --radius: 0.5rem;
+    
+    --yellow: 45 98% 53%;
+    --dark: 0 0% 4%;
+    --gray-light: 0 0% 97%;
+    --gray-medium: 0 0% 80%;
+    
+    --transition-smooth: all 0.3s ease;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 45 98% 53%;
+    --primary-foreground: 0 0% 0%;
+    
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 80%;
+    
+    --accent: 0 0% 13%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 45 98% 53%;
+    
+    --yellow: 45 98% 53%;
+    --dark: 0 0% 7%;
+    --gray-light: 0 0% 13%;
+    --gray-medium: 0 0% 33%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border transition-all duration-300;
+  }
+
+  body {
+    @apply bg-background text-foreground font-outfit;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-outfit {
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .hover-lift {
+    @apply hover:translate-y-[-4px] hover:shadow-xl transition-all duration-300;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-yellow-600 bg-clip-text text-transparent;
+  }
+}
