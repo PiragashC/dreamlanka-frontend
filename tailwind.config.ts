@@ -83,10 +83,24 @@ export default {
             height: "0",
           },
         },
+        "pulse-slow": {
+          '0%, 100%': {
+            transform: 'translateX(-100%)',
+          },
+          '50%': {
+            transform: 'translateX(100%)',
+          },
+        },
+        "move": {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
+        "move": "move 5s linear infinite",
       },
     },
   },

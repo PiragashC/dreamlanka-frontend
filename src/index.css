@@ -9,25 +9,25 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 4%;
+    --foreground: 0 0% 8%;
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 4%;
+    --card-foreground: 0 0% 8%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 4%;
+    --popover-foreground: 0 0% 8%;
     
     --primary: 45 98% 53%;
     --primary-foreground: 0 0% 0%;
     
     --secondary: 0 0% 97%;
-    --secondary-foreground: 0 0% 4%;
+    --secondary-foreground: 0 0% 8%;
     
     --muted: 0 0% 97%;
-    --muted-foreground: 0 0% 33%;
+    --muted-foreground: 0 0% 25%;
     
     --accent: 0 0% 97%;
-    --accent-foreground: 0 0% 4%;
+    --accent-foreground: 0 0% 8%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -39,7 +39,7 @@ All colors MUST be HSL.
     --radius: 0.5rem;
     
     --yellow: 45 98% 53%;
-    --dark: 0 0% 4%;
+    --dark: 0 0% 8%;
     --gray-light: 0 0% 97%;
     --gray-medium: 0 0% 80%;
     
@@ -96,6 +96,18 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @layer utilities {
   .font-outfit {
     font-family: 'Outfit', sans-serif;
@@ -111,5 +123,23 @@ All colors MUST be HSL.
   
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-yellow-600 bg-clip-text text-transparent;
+  }
+  
+  .text-enhanced {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-enhanced-dark {
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+  }
+  
+  .text-clean-white {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-clean-dark {
+    color: #1a1a1a;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
   }
 }

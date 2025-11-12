@@ -66,7 +66,36 @@
     "email": "Email",
     "address": "Address",
     "followUs": "Follow Us",
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "brandName": "DreamLanka",
+    "brandDescription": "Building excellence since 2005. We transform visions into reality with innovative construction solutions and exceptional craftsmanship.",
+    "contactTitle": "Contact Us",
+    "hoverText": "DreamLanka",
+    "sections": {
+      "services": {
+        "title": "Our Services",
+        "links": [
+          "Commercial Construction",
+          "Residential Building",
+          "Renovation & Remodeling",
+          "Infrastructure Projects"
+        ]
+      },
+      "company": {
+        "title": "Company",
+        "links": [
+          "About Us",
+          "Our Team",
+          "Careers",
+          "Get Quote"
+        ]
+      }
+    },
+    "contact": {
+      "email": "info@dreamlanka.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "123 Construction Ave, Building City, BC 12345"
+    }
   },
   "contact": {
     "title": "Get in Touch",
@@ -86,5 +115,35 @@
     "visionText": "To be the most trusted and innovative construction company, setting new standards in quality and sustainability.",
     "values": "Our Values",
     "timeline": "Company Growth Timeline"
+  },
+  "home": {
+    "mission": {
+      "label": "Our Mission",
+      "title": "Building Tomorrow, Today",
+      "description": "We are committed to delivering exceptional construction services that exceed expectations, ensuring safety, quality, and innovation in every project we undertake.",
+      "points": [
+        "Expert craftsmanship with decades of experience",
+        "Dedicated team of certified professionals",
+        "Cutting-edge technology and modern equipment"
+      ],
+      "cta": "Learn More About Us",
+      "cards": [
+        {
+          "title": "Excellence",
+          "description": "Delivering superior construction quality",
+          "tag": "Our Standard"
+        },
+        {
+          "title": "Safety First",
+          "description": "Protecting lives and property",
+          "tag": "Zero Accidents"
+        },
+        {
+          "title": "Innovation",
+          "description": "Modern techniques and technology",
+          "tag": "Future Ready"
+        }
+      ]
+    }
   }
 }
