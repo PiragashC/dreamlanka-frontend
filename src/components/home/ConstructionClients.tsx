@@ -1,40 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { IconCloud } from "../ui/interactive-icon-cloud";
+import { ClientLogoWall } from "../ui/client-logo-wall";
 
 const ConstructionClients = () => {
   const { t } = useTranslation();
-
-  // Construction and building-related company logos from Simple Icons
-  // Using only valid slugs that exist in simple-icons package
-  const constructionClientSlugs = [
-    "caterpillar",      // Caterpillar Inc. - Heavy machinery
-    "volvo",           // Volvo - Construction vehicles
-    "hitachi",         // Hitachi - Construction equipment
-    "bosch",           // Bosch - Construction tools
-    "atlassian",       // Atlassian - Project management
-    "autodesk",        // Autodesk - CAD software (includes Revit)
-    "sketchup",        // SketchUp - 3D modeling
-    "microsoft",       // Microsoft - Office tools
-    "google",          // Google - Cloud services
-    "amazon",          // Amazon AWS - Cloud infrastructure
-    "docker",          // Docker - Containerization
-    "kubernetes",      // Kubernetes - Container orchestration
-    "github",          // GitHub - Version control
-    "gitlab",          // GitLab - DevOps platform
-    "jenkins",         // Jenkins - CI/CD
-    "terraform",       // Terraform - Infrastructure as code
-    "ansible",         // Ansible - Automation
-    "prometheus",      // Prometheus - Monitoring
-    "grafana",         // Grafana - Analytics
-    "elastic",         // Elastic - Search and analytics
-    "mongodb",         // MongoDB - Database
-    "postgresql",      // PostgreSQL - Database
-    "react",           // React - Frontend framework
-    "nodejs",          // Node.js - Backend runtime
-    "typescript",      // TypeScript - Programming language
-  ];
 
   return (
     <section className="py-12 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
@@ -58,15 +28,15 @@ const ConstructionClients = () => {
           </p>
         </motion.div>
 
-        {/* Interactive Icon Cloud */}
+        {/* Client Logo Wall */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="relative flex size-full max-w-4xl mx-auto items-center justify-center overflow-hidden rounded-lg border bg-card border-border px-2 pb-4 pt-3 shadow-lg"
+          transition={{ delay: 0.15, duration: 0.7 }}
+          className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-border/60 bg-card/80 px-6 py-8 shadow-[0_20px_45px_rgba(8,11,30,0.18)] backdrop-blur"
         >
-          <IconCloud iconSlugs={constructionClientSlugs} />
+          <ClientLogoWall />
         </motion.div>
         
       </div>

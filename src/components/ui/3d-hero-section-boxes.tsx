@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { TextRotate } from './text-rotate';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { EtherealShadow } from './etheral-shadow';
 
@@ -58,27 +58,21 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
     </span>
   );
 };
-
-function HeroAnimatedBackground() {
+function HeroAnimatedBackground({
+  active,
+  reducedMotion,
+}: {
+  active: boolean;
+  reducedMotion: boolean;
+}) {
   const gradientLayers = [
     'radial-gradient(circle at 12% 25%, hsl(var(--primary) / 0.36), transparent 58%)',
     'radial-gradient(circle at 78% 18%, hsl(var(--primary) / 0.28), transparent 60%)',
     'radial-gradient(circle at 48% 82%, hsl(var(--accent) / 0.2), transparent 70%)',
   ];
 
-  return (
-    <div className="relative h-full w-full overflow-hidden">
-      <EtherealShadow
-        sizing="fill"
-        hideHeading
-        color="hsl(var(--primary) / 0.35)"
-        animation={{ scale: 82, speed: 60 }}
-        noise={{ opacity: 0.4, scale: 1.15 }}
-        gradientLayers={gradientLayers}
-        backgroundImage="linear-gradient(145deg, hsl(var(--background) / 0.9), hsl(var(--primary) / 0.45))"
-        noiseBlendMode="soft-light"
-        className="absolute inset-0 z-0"
-      />
+  const staticLayers = (
+    <>
       <div className="absolute inset-0 bg-gradient-to-br from-background/12 via-background/36 to-background/78 backdrop-blur-[1px]" />
       <div
         className="absolute inset-0 mix-blend-screen"
@@ -94,15 +88,40 @@ function HeroAnimatedBackground() {
             'radial-gradient(circle at 80% 88%, hsl(var(--background) / 0.38), transparent 70%)',
         }}
       />
-      <motion.div
-        className="pointer-events-none absolute inset-0 z-10"
-        style={{
-          backgroundImage:
-            'radial-gradient(ellipse at top, hsl(var(--primary) / 0.2), transparent 68%)',
-        }}
-        animate={{ opacity: [0.14, 0.26, 0.14] }}
-        transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-      />
+    </>
+  );
+
+  if (reducedMotion) {
+    return <div className="relative h-full w-full overflow-hidden">{staticLayers}</div>;
+  }
+
+  return (
+    <div className="relative h-full w-full overflow-hidden">
+      {active && (
+        <EtherealShadow
+          sizing="fill"
+          hideHeading
+          color="hsl(var(--primary) / 0.35)"
+          animation={{ scale: 82, speed: 60 }}
+          noise={{ opacity: 0.4, scale: 1.15 }}
+          gradientLayers={gradientLayers}
+          backgroundImage="linear-gradient(145deg, hsl(var(--background) / 0.9), hsl(var(--primary) / 0.45))"
+          noiseBlendMode="soft-light"
+          className="absolute inset-0 z-0"
+        />
+      )}
+      {staticLayers}
+      {active && (
+        <motion.div
+          className="pointer-events-none absolute inset-0 z-10"
+          style={{
+            backgroundImage:
+              'radial-gradient(ellipse at top, hsl(var(--primary) / 0.2), transparent 68%)',
+          }}
+          animate={{ opacity: [0.14, 0.26, 0.14] }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      )}
     </div>
   );
 }
@@ -281,10 +300,36 @@ const StatsSection = () => (
 );
 
 const HeroSection = () => {
+  const prefersReducedMotion = useReducedMotion();
+  const [backgroundActive, setBackgroundActive] = useState(false);
+  const backgroundRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+    const container = backgroundRef.current;
+    if (!container) {
+      setBackgroundActive(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(() => setBackgroundActive(true));
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, [prefersReducedMotion]);
+
   return (
     <div className="relative overflow-hidden bg-background">
-      <div className="absolute inset-0">
-        <HeroAnimatedBackground />
+      <div className="absolute inset-0" ref={backgroundRef}>
+        <HeroAnimatedBackground active={backgroundActive} reducedMotion={prefersReducedMotion} />
       </div>
 
       <motion.section

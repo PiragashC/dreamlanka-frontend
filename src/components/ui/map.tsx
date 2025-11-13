@@ -2,7 +2,6 @@
 
 import { useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import DottedMap from "dotted-map";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
@@ -38,18 +37,19 @@ export function WorldMap({
   const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
   const { theme } = useTheme();
 
-  const map = useMemo(() => new DottedMap({ height: 100, grid: "diagonal" }), []);
-
-  const svgMap = useMemo(
-    () =>
-      map.getSVG({
-        radius: 0.22,
-        color: theme === "dark" ? "#FFFF7F40" : "#00000040",
-        shape: "circle",
-        backgroundColor: theme === "dark" ? "black" : "white",
-      }),
-    [map, theme]
-  );
+  const mapBackground = useMemo(() => {
+    const dotColor = theme === "dark" ? "rgba(148, 163, 184, 0.18)" : "rgba(15, 23, 42, 0.12)";
+    const baseColor = theme === "dark" ? "#05070d" : "#f8fafc";
+    return {
+      backgroundColor: baseColor,
+      backgroundImage: `
+        radial-gradient(circle at 1px 1px, ${dotColor} 1px, transparent 0),
+        radial-gradient(circle at center, rgba(14, 116, 144, 0.18), transparent 70%),
+        radial-gradient(circle at 80% 25%, rgba(59, 130, 246, 0.16), transparent 70%)
+      `,
+      backgroundSize: "16px 16px, 100% 100%, 100% 100%",
+    } as React.CSSProperties;
+  }, [theme]);
 
   const projectPoint = (lat: number, lng: number) => {
     const x = (lng + 180) * (800 / 360);
@@ -69,14 +69,13 @@ export function WorldMap({
   const fullCycleDuration = totalAnimationTime + pauseTime;
 
   return (
-    <div className="relative aspect-[2/1] w-full overflow-hidden rounded-3xl bg-white font-sans dark:bg-black md:aspect-[2.5/1] lg:aspect-[2/1]">
-      <img
-        src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        alt="world map"
-        className="h-full w-full select-none object-cover [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)]"
-    loading="lazy"
-        draggable={false}
+    <div className="relative aspect-[2/1] w-full overflow-hidden rounded-3xl font-sans md:aspect-[2.5/1] lg:aspect-[2/1]">
+      <div
+        className="absolute inset-0 h-full w-full select-none [mask-image:linear-gradient(to_bottom,transparent,white_12%,white_88%,transparent)]"
+        style={mapBackground}
+        aria-hidden="true"
       />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-background/20 via-background/5 to-background/60" />
 
       <svg
         ref={svgRef}

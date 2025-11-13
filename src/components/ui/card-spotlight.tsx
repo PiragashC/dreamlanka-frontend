@@ -4,18 +4,11 @@ import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 
 import React, {
   MouseEvent as ReactMouseEvent,
-  Suspense,
-  lazy,
+  useMemo,
   useState,
 } from "react";
 
 import { cn } from "@/lib/utils";
-
-const LazyCanvasRevealEffect = lazy(() =>
-  import("@/components/ui/canvas-reveal-effect").then((module) => ({
-    default: module.CanvasRevealEffect,
-  }))
-);
 
 export const CardSpotlight = ({
   children,
@@ -46,6 +39,16 @@ export const CardSpotlight = ({
   const handleMouseEnter = () => setIsHovering(true);
   const handleMouseLeave = () => setIsHovering(false);
 
+  const glowStyle = useMemo(() => {
+    const stopColor = color.includes("rgba")
+      ? color.replace(/rgba?\((.+)\)/, "rgba($1, 0.55)")
+      : `${color}88`;
+
+    return {
+      background: `radial-gradient(circle at center, ${stopColor} 0%, transparent 65%)`,
+    } as React.CSSProperties;
+  }, [color]);
+
   return (
     <div
       className={cn(
@@ -71,17 +74,13 @@ export const CardSpotlight = ({
         }}
       >
         {isHovering && (
-          <Suspense fallback={null}>
-            <LazyCanvasRevealEffect
-              animationSpeed={5}
-              containerClassName="bg-transparent absolute inset-0 pointer-events-none"
-              colors={[
-                [59, 130, 246],
-                [139, 92, 246],
-              ]}
-              dotSize={3}
+          <div className="pointer-events-none absolute inset-0 rounded-md">
+            <div
+              className="absolute inset-0 animate-pulse rounded-md opacity-80 blur-2xl transition duration-300"
+              style={glowStyle}
             />
-          </Suspense>
+            <div className="absolute inset-0 rounded-md border border-white/10 opacity-30" />
+          </div>
         )}
       </motion.div>
       {children}
