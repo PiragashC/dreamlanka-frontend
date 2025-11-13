@@ -1,60 +1,75 @@
 {
   "nav": {
     "home": "Home",
+    "company": "Company",
+    "companyAbout": "About Us",
+    "companyExperts": "Our Experts",
+    "joinBe": "Join Buildora",
     "services": "Services",
     "projects": "Projects",
-    "about": "About",
-    "contact": "Contact"
+    "packages": "Packages",
+    "packagesSamples": "Samples",
+    "packagesRates": "Rates",
+    "packagesExplore": "Explore",
+    "resources": "Resources",
+    "resourcesApprovals": "Approvals & Compliance",
+    "resourcesArchi": "Architecture Gallery",
+    "resourcesInterior": "Interior Gallery",
+    "resourcesConsultation": "Free Consultation",
+    "learningHub": "Learning Hub",
+    "contact": "Contact Us",
+    "quickLinks": "Quick Links",
+    "overview": "Overview"
   },
   "hero": {
-    "title": "We provide effective and reliable solutions",
-    "subtitle": "constructing services",
-    "getStarted": "Get Started",
+    "title": "Engineering enduring spaces across Sri Lanka",
+    "subtitle": "construction specialists",
+    "getStarted": "Start a Project",
     "explore": "Explore"
   },
   "stats": {
-    "projects": "Projects",
-    "clients": "Clients",
-    "staff": "Staffs",
+    "projects": "Signatures Delivered",
+    "clients": "Partners",
+    "staff": "Specialists",
     "satisfaction": "Satisfaction"
   },
   "services": {
-    "title": "A comprehensive set of services",
+    "title": "Solutions shaped around your build agenda",
     "subtitle": "Services",
     "planning": "Project Planning",
-    "planningDesc": "Strategic planning and project management for successful construction execution.",
+    "planningDesc": "Discovery, feasibility, and delivery roadmaps backed by data-rich modelling.",
     "contracting": "General Contracting",
-    "contractingDesc": "Complete contracting services from foundation to final touches.",
+    "contractingDesc": "Integrated design-build teams managing procurement, trades, and site execution.",
     "renovation": "Renovations",
-    "renovationDesc": "Transform existing spaces with our expert renovation services.",
+    "renovationDesc": "Adaptive reuse and interior restructures crafted to refresh commercial assets.",
     "infrastructure": "Infrastructure Projects",
-    "infrastructureDesc": "Large-scale infrastructure development and civil engineering projects.",
-    "learnMore": "Learn More"
+    "infrastructureDesc": "Civil, utilities, and public realm upgrades orchestrated with minimal disruption.",
+    "learnMore": "View Packages"
   },
   "team": {
-    "title": "Meet our reliable and efficient contractors",
-    "subtitle": "A team of reliable and experienced contractors"
+    "title": "Meet the Buildora Engineers collective",
+    "subtitle": "A team of designers, planners, and delivery specialists"
   },
   "quality": {
-    "title": "An exceptional quality that can't be beaten",
-    "description": "We deliver projects with unmatched quality, precision, and attention to detail. Our commitment to excellence ensures every construction meets the highest standards."
+    "title": "Quality engineered for longevity",
+    "description": "From structural cores to bespoke finishes, every Buildora project is governed by rigorous QA frameworks, supplier vetting, and digital traceability."
   },
   "cta": {
-    "title": "Ready to pull the trigger? Get a quote today",
-    "button": "Get Quote",
-    "contact": "Contact Us"
+    "title": "Ready to shape your next space?",
+    "button": "Get a Custom Proposal",
+    "contact": "Talk to Buildora"
   },
   "projects": {
-    "title": "Take a look at our most recent project",
+    "title": "Explore recent Buildora signatures",
     "subtitle": "Latest Projects",
     "viewAll": "View All Projects"
   },
   "testimonials": {
-    "title": "What our clients say about us",
+    "title": "Voices from Buildora partners",
     "subtitle": "Testimonials"
   },
   "news": {
-    "title": "Latest News & articles",
+    "title": "Latest news & insights",
     "subtitle": "News & Articles",
     "readMore": "Read More"
   },
@@ -67,10 +82,10 @@
     "address": "Address",
     "followUs": "Follow Us",
     "rights": "All rights reserved",
-    "brandName": "DreamLanka",
-    "brandDescription": "Building excellence since 2005. We transform visions into reality with innovative construction solutions and exceptional craftsmanship.",
+    "brandName": "Buildora Engineers",
+    "brandDescription": "Engineering distinctive spaces across Sri Lanka with precision construction, vibrant design, and trusted partnerships.",
     "contactTitle": "Contact Us",
-    "hoverText": "DreamLanka",
+    "hoverText": "Buildora",
     "sections": {
       "services": {
         "title": "Our Services",
@@ -85,16 +100,16 @@
         "title": "Company",
         "links": [
           "About Us",
-          "Our Team",
+          "Our Experts",
           "Careers",
-          "Get Quote"
+          "Join Buildora"
         ]
       }
     },
     "contact": {
-      "email": "info@dreamlanka.com",
-      "phone": "+1 (555) 123-4567",
-      "address": "123 Construction Ave, Building City, BC 12345"
+      "email": "hello@buildoraengineers.com",
+      "phone": "+94 21 456 7890",
+      "address": "KKS Road, Nallur, Jaffna 40000, Sri Lanka"
     }
   },
   "contact": {
@@ -108,25 +123,25 @@
     "office": "Office Address"
   },
   "about": {
-    "title": "About ConstructlyX",
+    "title": "About Buildora Engineers",
     "mission": "Our Mission",
-    "missionText": "To deliver exceptional construction solutions that exceed expectations and build lasting relationships with our clients.",
+    "missionText": "Deliver distinctive, resilient spaces through collaborative design, responsible construction, and transparent partnerships.",
     "vision": "Our Vision",
-    "visionText": "To be the most trusted and innovative construction company, setting new standards in quality and sustainability.",
+    "visionText": "To be Sri Lanka’s most trusted construction collaborator, fusing innovation with craftsmanship on every build.",
     "values": "Our Values",
     "timeline": "Company Growth Timeline"
   },
   "home": {
     "mission": {
       "label": "Our Mission",
-      "title": "Building Tomorrow, Today",
-      "description": "We are committed to delivering exceptional construction services that exceed expectations, ensuring safety, quality, and innovation in every project we undertake.",
+      "title": "Building tomorrow, today",
+      "description": "We combine ingenuity, rigorous planning, and field precision to deliver projects that serve communities and investors alike.",
       "points": [
         "Expert craftsmanship with decades of experience",
         "Dedicated team of certified professionals",
         "Cutting-edge technology and modern equipment"
       ],
-      "cta": "Learn More About Us",
+      "cta": "Discover Buildora",
       "cards": [
         {
           "title": "Excellence",

@@ -21,75 +21,75 @@ const Services = () => {
   const services = useMemo(
     () => [
       {
-        icon: ClipboardCheck,
-        iconGradient: "from-blue-500 to-cyan-500",
-        title: t("services.planning"),
-        description: t("services.planningDesc"),
-        detailedDescription:
-          "Our comprehensive project planning services ensure your construction project is executed flawlessly from conception to completion. We combine strategic vision with meticulous attention to detail.",
-        features: [
-          "Site analysis and feasibility studies",
-          "Budget planning and cost estimation",
-          "Timeline development and scheduling",
-          "Resource allocation and management",
-          "Risk assessment and mitigation strategies",
-          "Regulatory compliance and permit acquisition",
-        ],
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1740&auto=format&fit=crop",
-      },
-      {
         icon: Hammer,
         iconGradient: "from-orange-500 to-red-500",
-        title: t("services.contracting"),
-        description: t("services.contractingDesc"),
+        title: "Construction",
+        description: "Where your vision becomes reality.",
         detailedDescription:
-          "Complete general contracting services that handle every aspect of your construction project. From initial groundwork to final touches, we manage the entire process with precision and expertise.",
+          "From municipal approvals to interior finishing, we handle every step of your construction journey with heart, precision, and trust. Our dedicated site engineers, real-time CCTV monitoring, and smart, eco-friendly solutions ensure your project is delivered on time—without compromise.",
         features: [
-          "Foundation and structural construction",
-          "Electrical and plumbing installations",
-          "HVAC systems and climate control",
-          "Interior and exterior finishing",
-          "Quality control and inspections",
-          "Project coordination and site management",
+          "Dedicated site engineer on every build",
+          "CCTV live monitoring for real-time transparency",
+          "Municipal council and UDA approvals & legal support",
+          "Tailored construction packages for every budget",
+          "IoT-enabled smart home system integration",
+          "Eco-friendly materials and energy-efficient systems",
+          "Guaranteed on-time delivery with uncompromised quality",
         ],
         image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1740&auto=format&fit=crop",
       },
       {
-        icon: Home,
-        iconGradient: "from-purple-500 to-pink-500",
-        title: t("services.renovation"),
-        description: t("services.renovationDesc"),
+        icon: Building2,
+        iconGradient: "from-blue-500 to-cyan-500",
+        title: "Architecture",
+        description: "Designs that inspire, spaces that endure.",
         detailedDescription:
-          "Transform your existing spaces into modern, functional environments that reflect your vision. Our renovation services breathe new life into buildings while preserving their character and value.",
+          "Our architectural team transforms ideas into inspiring realities, balancing beauty, function, and innovation. Every design is tailored to your lifestyle, future needs, and regulatory requirements—complete with immersive 3D visualisations.",
         features: [
-          "Structural modifications and upgrades",
-          "Interior redesign and remodeling",
-          "Kitchen and bathroom renovations",
-          "Energy-efficient improvements",
-          "Historical preservation and restoration",
-          "Smart home technology integration",
+          "Lifelike 3D renders and virtual walkthroughs",
+          "Sustainable, energy-efficient, and smart design strategies",
+          "Tailored concepts for residential, commercial, and industrial spaces",
+          "Government-compliant drawings for effortless approvals",
         ],
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1740&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1496158283194-0d4f6be3001a?auto=format&fit=crop&w=1740&q=80",
       },
       {
-        icon: Building2,
-        iconGradient: "from-green-500 to-emerald-500",
-        title: t("services.infrastructure"),
-        description: t("services.infrastructureDesc"),
+        icon: Home,
+        iconGradient: "from-purple-500 to-pink-500",
+        title: "Interior Design",
+        description: "Where style meets soul.",
         detailedDescription:
-          "Large-scale infrastructure projects that build the foundation for communities and businesses. We deliver complex civil engineering solutions with precision, efficiency, and long-term sustainability.",
+          "We curate interiors that reflect who you are—blending timeless elegance, functionality, and comfort. From space planning to bespoke furniture and smart technology, Buildora crafts interiors that feel personal and luxurious.",
         features: [
-          "Road and bridge construction",
-          "Water and wastewater systems",
-          "Public facility development",
-          "Industrial complex construction",
-          "Environmental engineering solutions",
-          "Maintenance and infrastructure upgrades",
+          "End-to-end interior design and execution",
+          "Premium material, texture, and finish curation",
+          "Custom furniture and built-in joinery design",
+          "Lighting and ambience design for every mood",
+          "Smart interior integration for seamless living",
+          "Project management to ensure flawless delivery",
         ],
-        image: "https://images.unsplash.com/photo-1581091215367-59ab6d234ca3?q=80&w=1742&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1549187774-b4e9b0445b41?auto=format&fit=crop&w=1740&q=80",
+      },
+      {
+        icon: ClipboardCheck,
+        iconGradient: "from-green-500 to-emerald-500",
+        title: "Renovation",
+        description: "Transform your space. Refresh your life.",
+        detailedDescription:
+          "Whether it’s your home, office, or commercial building, we bring new life to old spaces—blending modern functionality with timeless character. Every renovation is delivered with transparency, craftsmanship, and punctuality.",
+        features: [
+          "Structural and aesthetic upgrades",
+          "Interior and exterior remodelling",
+          "Energy-efficient retrofits and insulation upgrades",
+          "Waterproofing, repainting, and finishing works",
+          "Bathroom and kitchen modernisation",
+          "Roof repairing and restoration solutions",
+          "On-budget, on-time delivery with clear communication",
+        ],
+        image: "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=1740&q=80",
       },
     ],
-    [t]
+    []
   );
 
   return (
@@ -104,11 +104,11 @@ const Services = () => {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-              Our Service Portfolio
+              Comprehensive Design & Build Services
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Comprehensive construction solutions tailored to meet your specific needs and exceed your expectations. 
-              Discover how we can transform your vision into reality.
+              From concept to completion, Buildora Engineers delivers construction, architecture, interior design, and renovation solutions
+              that honour your vision while embracing sustainability, technology, and craftsmanship.
             </p>
           </motion.div>
         </div>
@@ -190,7 +190,7 @@ const Services = () => {
                     <div className="mt-auto pt-6 border-t border-border/50">
                       <Link to="/contact" className="block">
                         <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 shadow-lg shadow-primary/20">
-                          {t("services.learnMore")}
+                          Talk to Buildora
                         </Button>
                       </Link>
                     </div>
@@ -232,7 +232,7 @@ const Services = () => {
                   { text: "Your" },
                   { 
                     text: "Project?", 
-                    className: "text-primary dark:text-primary" 
+                    className: "text-primary"
                   },
                 ]}
                 className="justify-center"

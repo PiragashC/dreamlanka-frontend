@@ -1,10 +1,9 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useMemo } from "react";
 
-type Theme = "light" | "dark";
+type Theme = "light";
 
 type ThemeProviderProps = {
   children: React.ReactNode;
-  defaultTheme?: Theme;
 };
 
 type ThemeProviderState = {
@@ -12,35 +11,26 @@ type ThemeProviderState = {
   setTheme: (theme: Theme) => void;
 };
 
-const initialState: ThemeProviderState = {
+const ThemeProviderContext = createContext<ThemeProviderState>({
   theme: "light",
-  setTheme: () => null,
-};
+  setTheme: () => undefined,
+});
 
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
-
-export function ThemeProvider({
-  children,
-  defaultTheme = "light",
-  ...props
-}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem("theme") as Theme) || defaultTheme
-  );
-
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove("light", "dark");
-    root.classList.add(theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    root.classList.remove("dark");
+    root.classList.add("light");
+    localStorage.removeItem("theme");
+  }, []);
 
-  const value = {
-    theme,
-    setTheme: (newTheme: Theme) => {
-      setTheme(newTheme);
-    },
-  };
+  const value = useMemo<ThemeProviderState>(
+    () => ({
+      theme: "light",
+      setTheme: () => undefined,
+    }),
+    []
+  );
 
   return (
     <ThemeProviderContext.Provider {...props} value={value}>

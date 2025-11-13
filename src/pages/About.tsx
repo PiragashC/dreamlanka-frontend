@@ -79,7 +79,7 @@ const About = () => {
       year: "2010",
       title: "Blueprint & beginnings",
       detail:
-        "DreamLanka launches with a five-person crew, delivering bespoke residences that champion craftsmanship and trust.",
+        "Buildora Engineers launches with a five-person crew, delivering bespoke residences that champion craftsmanship and trust.",
     },
     {
       year: "2015",
@@ -148,7 +148,7 @@ const About = () => {
   return (
     <div className="bg-background pt-16">
       {/* Hero */}
-      <section className="relative overflow-hidden pb-24 pt-28">
+      <section id="about-us" className="relative overflow-hidden pb-24 pt-28">
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
         <div className="absolute left-1/2 top-1/4 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
 
@@ -156,7 +156,7 @@ const About = () => {
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-6 flex justify-center">
               <TextDisperse className="text-2xl font-semibold tracking-tight text-primary/90 md:text-3xl">
-                DreamLanka
+                Buildora Engineers
               </TextDisperse>
             </div>
             <TypewriterEffectSmooth
@@ -171,9 +171,9 @@ const About = () => {
               cursorClassName="bg-primary"
             />
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              We are a multidisciplinary team of architects, engineers, makers, and project futurists delivering
-              landmark developments with precision and humanity. Our integrated delivery model bridges vision and
-              buildability, sustainability and speed, data and design.
+              Buildora Engineers is a multidisciplinary team of architects, engineers, makers, and project futurists
+              delivering landmark developments with precision and humanity. Our integrated delivery model bridges vision
+              and buildability, sustainability and speed, data and design.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -280,7 +280,7 @@ const About = () => {
       </section>
 
       {/* Leadership */}
-      <section className="py-24">
+      <section id="our-experts" className="py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <motion.h2
@@ -358,11 +358,81 @@ const About = () => {
         </div>
       </section>
 
+      {/* Join Buildora */}
+      <section id="join-be" className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl font-bold text-foreground md:text-4xl"
+            >
+              Join the Buildora Engineers collective
+            </motion.h2>
+            <p className="mt-4 text-sm text-muted-foreground md:text-base">
+              Whether you are an experienced construction professional or a specialist partner, we are always expanding
+              our network of collaborators who share a passion for purposeful builds.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45 }}
+              className="rounded-3xl border border-blue-100 bg-white p-8 shadow-[0_25px_65px_rgba(15,23,42,0.08)]"
+            >
+              <h3 className="text-xl font-semibold text-accent">Careers & apprenticeships</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Step into a delivery pod where designers, planners, and field teams collaborate as one. We support
+                professional certifications, leadership mentoring, and on-the-job innovation labs.
+              </p>
+              <ul className="mt-5 space-y-2 text-sm text-foreground/80">
+                <li>• Site leadership roles across island-wide programmes</li>
+                <li>• Graduate apprenticeships in design management</li>
+                <li>• Rotations through sustainability & digital construction teams</li>
+              </ul>
+              <Link
+                to="/contact"
+                className="mt-6 inline-flex items-center justify-center rounded-full border border-blue-100 px-5 py-2 text-sm font-semibold text-accent hover:border-primary"
+              >
+                Share your profile
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+              className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-blue-50 to-orange-50 p-8 shadow-[0_25px_65px_rgba(15,23,42,0.08)]"
+            >
+              <h3 className="text-xl font-semibold text-accent">Delivery partners & suppliers</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Join our preferred network spanning specialist trades, fabrication, technology, and sustainable material
+                sourcing. Buildora maintains transparent evaluation and rapid onboarding.
+              </p>
+              <ul className="mt-5 space-y-2 text-sm text-foreground/80">
+                <li>• ISO-aligned procurement and QA processes</li>
+                <li>• Prompt payment commitments with digital tracking</li>
+                <li>• Visibility into upcoming tenders and design competitions</li>
+              </ul>
+              <Link
+                to="/contact"
+                className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-primary/30 transition hover:bg-primary/90"
+              >
+                Register your interest
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl rounded-3xl border border-primary/20 bg-primary/10 px-8 py-12 text-center backdrop-blur">
-            <h2 className="text-3xl font-bold text-primary">Let’s build your next landmark</h2>
+            <h2 className="text-3xl font-bold text-primary">Let’s build your next landmark with Buildora</h2>
             <p className="mt-4 text-sm text-primary/90 md:text-base">
               Share your vision and we’ll orchestrate the strategy, teams, and technology to bring it to life—on time,
               on budget, and built to endure.

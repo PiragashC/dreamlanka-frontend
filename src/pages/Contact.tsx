@@ -32,20 +32,20 @@ const Contact = () => {
       icon: Mail,
       headline: "Write to us",
       description: "Share drawings, RFPs, or project briefs and we’ll respond within one business day.",
-      value: "hello@dreamlanka.com",
+      value: "hello@buildoraengineers.com",
       action: "Email us",
     },
     {
       icon: Headset,
       headline: "Schedule a consultation",
       description: "Book a 30-minute discovery session to scope timelines and budget expectations.",
-      value: "Calendly.com/dreamlanka",
+      value: "calendly.com/buildora-engineers",
       action: "Book a call",
     },
   ];
 
   const officeHours = [
-    { label: "Office", value: "DreamLanka, KKS Road, Jaffna, Sri Lanka" },
+    { label: "Office", value: "Buildora Engineers, KKS Road, Jaffna, Sri Lanka" },
     { label: "Hours", value: "Mon – Fri: 8:00 AM – 6:00 PM" },
     { label: "Emergency support", value: "24/7 for active projects" },
   ];
@@ -172,7 +172,7 @@ const Contact = () => {
                   </div>
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <p className="text-xs text-muted-foreground">
-                      By submitting, you agree to our privacy policy and to be contacted by the DreamLanka team.
+                      By submitting, you agree to our privacy policy and to be contacted by the Buildora Engineers team.
                     </p>
                     <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                       {t("contact.send")}
@@ -189,7 +189,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-foreground">Primary office</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      DreamLanka, KKS Road, Nallur, Jaffna 40000, Sri Lanka
+                      Buildora Engineers, KKS Road, Nallur, Jaffna 40000, Sri Lanka
                     </p>
                   </div>
                 </div>
@@ -246,7 +246,7 @@ const Contact = () => {
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary" />
-                  DreamLanka, KKS Road, Nallur, Jaffna 40000, Sri Lanka
+                  Buildora Engineers, KKS Road, Nallur, Jaffna 40000, Sri Lanka
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Clock className="h-5 w-5 text-primary" />
@@ -257,7 +257,7 @@ const Contact = () => {
 
             <div className="overflow-hidden rounded-3xl border border-border/60 bg-card/80 shadow-lg shadow-primary/5">
               <iframe
-                title="DreamLanka Jaffna"
+                title="Buildora Engineers Jaffna"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.1013796964636!2d80.0210!3d9.6706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe553a858d8d81%3A0x9021b7b9c7403817!2sJaffna%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1730790000000!5m2!1sen!2slk"
                 className="h-[360px] w-full"
                 allowFullScreen
@@ -275,7 +275,7 @@ const Contact = () => {
           <div className="mx-auto max-w-3xl rounded-3xl border border-primary/20 bg-primary/10 px-8 py-12 text-center backdrop-blur">
             <h2 className="text-3xl font-bold text-primary">Ready to start a conversation?</h2>
             <p className="mt-4 text-sm text-primary/90 md:text-base">
-              From early feasibility studies to final commissioning, DreamLanka is your partner in delivering iconic,
+              From early feasibility studies to final commissioning, Buildora Engineers is your partner in delivering iconic,
               resilient places. Let’s create something extraordinary together.
             </p>
             <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">

@@ -8,31 +8,31 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      quote: "DreamLanka Construction exceeded all our expectations! Their attention to detail and commitment to quality is unmatched. The project was completed on time and within budget.",
+    quote: "Buildora Engineers exceeded all our expectations! Their attention to detail and commitment to quality is unmatched. The project was completed on time and within budget.",
       name: "Sarah Johnson",
       designation: "Project Manager, TechCorp",
       src: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=400&auto=format&fit=crop",
     },
     {
-      quote: "Working with DreamLanka was a game-changer for our company. Their innovative approach and professional team delivered exceptional results that transformed our office space.",
+    quote: "Working with Buildora Engineers was a game-changer for our company. Their innovative approach and professional team delivered exceptional results that transformed our office space.",
       name: "Michael Chen",
       designation: "CEO, Innovation Labs",
       src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop",
     },
     {
-      quote: "The quality of work and professionalism shown by DreamLanka Construction is outstanding. They turned our vision into reality with precision and excellence.",
+    quote: "The quality of work and professionalism shown by Buildora Engineers is outstanding. They turned our vision into reality with precision and excellence.",
       name: "Emily Rodriguez",
       designation: "Property Developer",
       src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop",
     },
     {
-      quote: "From planning to completion, DreamLanka Construction provided exceptional service. Their expertise in modern construction techniques is truly impressive.",
+    quote: "From planning to completion, Buildora Engineers provided exceptional service. Their expertise in modern construction techniques is truly impressive.",
       name: "David Thompson",
       designation: "Architect, Design Studio",
       src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
     },
     {
-      quote: "DreamLanka Construction delivered our dream home with perfection. Their craftsmanship and attention to detail made all the difference in creating our perfect space.",
+    quote: "Buildora Engineers delivered our dream home with perfection. Their craftsmanship and attention to detail made all the difference in creating our perfect space.",
       name: "Lisa Anderson",
       designation: "Homeowner",
       src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop",

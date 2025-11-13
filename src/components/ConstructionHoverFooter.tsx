@@ -9,7 +9,6 @@ import {
   Instagram,
   Twitter,
   Linkedin,
-  Building2,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { FooterBackgroundGradient, TextHoverEffect } from "@/components/ui/hover-footer";
@@ -73,17 +72,22 @@ function ConstructionHoverFooter() {
   );
 
   return (
-    <footer className="relative overflow-hidden bg-[#0F0F11] text-white">
+    <footer className="relative overflow-hidden bg-[#f4f7ff] text-foreground">
       <FooterBackgroundGradient />
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-12 px-6 py-16 md:px-10 lg:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
+        <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-16">
           {/* Brand section */}
           <div className="flex flex-col space-y-4">
-            <div className="flex items-center space-x-2">
-              <Building2 className="text-[#3ca2fa] text-3xl" />
-              <span className="text-white text-3xl font-bold">{t("footer.brandName")}</span>
+            <div className="flex items-center space-x-3">
+              <img
+                src="/be-logo.png"
+                alt={t("footer.brandName") ?? "Buildora Engineers"}
+                className="h-12 w-auto"
+                draggable={false}
+              />
+              <span className="text-3xl font-bold text-accent">{t("footer.brandName")}</span>
             </div>
-            <p className="text-sm leading-relaxed text-gray-300">
+            <p className="text-sm leading-relaxed text-foreground/70">
               {t("footer.brandDescription")}
             </p>
             <div className="flex space-x-3 pt-2">
@@ -92,7 +96,7 @@ function ConstructionHoverFooter() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="text-gray-400 hover:text-[#3ca2fa] transition-colors"
+                  className="text-foreground/50 transition-colors hover:text-primary"
                 >
                   <Icon size={20} />
                 </a>
@@ -103,7 +107,7 @@ function ConstructionHoverFooter() {
           {/* Footer link sections */}
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h4 className="text-white text-lg font-semibold mb-6">
+              <h4 className="mb-6 text-lg font-semibold text-accent">
                 {section.title}
               </h4>
               <ul className="space-y-3">
@@ -111,12 +115,12 @@ function ConstructionHoverFooter() {
                   <li key={link.label} className="relative">
                     <Link
                       to={link.href}
-                      className="text-gray-300 hover:text-[#3ca2fa] transition-colors text-sm"
+                      className="text-sm text-foreground/65 transition-colors hover:text-accent"
                     >
                       {link.label}
                     </Link>
                     {link.pulse && (
-                      <span className="absolute top-0 right-[-10px] w-2 h-2 rounded-full bg-[#3ca2fa] animate-pulse"></span>
+                      <span className="absolute top-0 right-[-10px] h-2 w-2 rounded-full bg-primary animate-pulse"></span>
                     )}
                   </li>
                 ))}
@@ -126,22 +130,22 @@ function ConstructionHoverFooter() {
 
           {/* Contact section */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-6">
+            <h4 className="mb-6 text-lg font-semibold text-accent">
               {t("footer.contactTitle")}
             </h4>
             <ul className="space-y-4">
               {contactInfo.map(({ Icon, text, href }) => (
                 <li key={text} className="flex items-start space-x-3">
-                  <Icon size={18} className="text-[#3ca2fa]" />
+                  <Icon size={18} className="text-primary" />
                   {href ? (
                     <a
                       href={href}
-                      className="text-gray-300 hover:text-[#3ca2fa] transition-colors text-sm"
+                      className="text-sm text-foreground/70 transition-colors hover:text-accent"
                     >
                       {text}
                     </a>
                   ) : (
-                    <span className="text-gray-300 hover:text-[#3ca2fa] transition-colors text-sm">
+                    <span className="text-sm text-foreground/70">
                       {text}
                     </span>
                   )}
@@ -151,37 +155,37 @@ function ConstructionHoverFooter() {
           </div>
         </div>
 
-        <hr className="border-t border-white/10" />
+        <hr className="border-t border-blue-100" />
 
         {/* Footer bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
+        <div className="flex flex-col items-center justify-between space-y-4 text-sm md:flex-row md:space-y-0">
           {/* Quick Links */}
-          <div className="flex space-x-6 text-gray-400">
-            <Link to="/" className="hover:text-[#3ca2fa] transition-colors">
+          <div className="flex space-x-6 text-foreground/60">
+            <Link to="/" className="transition-colors hover:text-accent">
               {t("nav.home")}
             </Link>
-            <Link to="/services" className="hover:text-[#3ca2fa] transition-colors">
+            <Link to="/services" className="transition-colors hover:text-accent">
               {t("nav.services")}
             </Link>
-            <Link to="/projects" className="hover:text-[#3ca2fa] transition-colors">
+            <Link to="/projects" className="transition-colors hover:text-accent">
               {t("nav.projects")}
             </Link>
-            <Link to="/about" className="hover:text-[#3ca2fa] transition-colors">
+            <Link to="/about" className="transition-colors hover:text-accent">
               {t("nav.about")}
             </Link>
-            <Link to="/contact" className="hover:text-[#3ca2fa] transition-colors">
+            <Link to="/contact" className="transition-colors hover:text-accent">
               {t("nav.contact")}
             </Link>
           </div>
 
           {/* Copyright */}
-          <p className="text-center md:text-left text-gray-400">
+          <p className="text-center text-foreground/60 md:text-left">
             &copy; {new Date().getFullYear()} {t("footer.brandName")} {t("footer.rights")}
           </p>
         </div>
       </div>
 
-      <div className="flex h-[18rem] sm:h-[20rem] md:h-[22rem] lg:h-[26rem] -mt-28 sm:-mt-32 lg:-mt-40 -mb-24 sm:-mb-28 lg:-mb-32 justify-center items-center px-6">
+      <div className="flex h-[18rem] -mb-24 -mt-28 justify-center px-6 sm:h-[20rem] sm:-mb-28 sm:-mt-32 md:h-[22rem] lg:h-[26rem] lg:-mb-32 lg:-mt-40">
         <TextHoverEffect
           text={t("footer.hoverText")}
           className="w-full max-w-[280px] sm:max-w-[360px] md:max-w-[460px] lg:max-w-[560px] xl:max-w-[640px]"

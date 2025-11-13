@@ -72,7 +72,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
       {rows.map((_, i) => (
         <motion.div
           key={`row` + i}
-          className="w-16 h-8 border-l border-slate-700 dark:border-slate-400 relative pointer-events-auto"
+        className="relative h-8 w-16 border-l border-blue-200 pointer-events-auto"
         >
           {cols.map((_, j) => (
             <motion.div
@@ -84,7 +84,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                 transition: { duration: 2 },
               }}
               key={`col` + j}
-              className="w-16 h-8 border-r border-t border-slate-700 dark:border-slate-400 relative cursor-pointer"
+              className="relative h-8 w-16 cursor-pointer border-r border-t border-blue-200"
             >
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg
@@ -93,7 +93,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-700 dark:text-slate-400 stroke-[1px] pointer-events-none"
+                  className="pointer-events-none absolute -top-[14px] -left-[22px] h-6 w-10 stroke-[1px] text-slate-600"
                 >
                   <path
                     strokeLinecap="round"

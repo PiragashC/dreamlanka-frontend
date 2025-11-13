@@ -2,7 +2,6 @@
 
 import { useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
 interface Coordinates {
@@ -35,21 +34,18 @@ export function WorldMap({
 }: WorldMapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
-  const { theme } = useTheme();
-
-  const mapBackground = useMemo(() => {
-    const dotColor = theme === "dark" ? "rgba(148, 163, 184, 0.18)" : "rgba(15, 23, 42, 0.12)";
-    const baseColor = theme === "dark" ? "#05070d" : "#f8fafc";
-    return {
-      backgroundColor: baseColor,
+  const mapBackground = useMemo(
+    () => ({
+      backgroundColor: "#f5f7fb",
       backgroundImage: `
-        radial-gradient(circle at 1px 1px, ${dotColor} 1px, transparent 0),
-        radial-gradient(circle at center, rgba(14, 116, 144, 0.18), transparent 70%),
-        radial-gradient(circle at 80% 25%, rgba(59, 130, 246, 0.16), transparent 70%)
+        radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.12) 1px, transparent 0),
+        radial-gradient(circle at center, rgba(15, 23, 42, 0.08), transparent 70%),
+        radial-gradient(circle at 80% 25%, rgba(249, 115, 22, 0.14), transparent 70%)
       `,
       backgroundSize: "16px 16px, 100% 100%, 100% 100%",
-    } as React.CSSProperties;
-  }, [theme]);
+    }),
+    []
+  );
 
   const projectPoint = (lat: number, lng: number) => {
     const x = (lng + 180) * (800 / 360);
@@ -75,7 +71,7 @@ export function WorldMap({
         style={mapBackground}
         aria-hidden="true"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-background/20 via-background/5 to-background/60" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/60 via-white/30 to-blue-100/60" />
 
       <svg
         ref={svgRef}
@@ -206,7 +202,7 @@ export function WorldMap({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="absolute bottom-4 left-4 rounded-lg border border-gray-200 bg-white/90 px-3 py-2 text-sm font-medium text-black backdrop-blur-sm dark:border-gray-700 dark:bg-black/90 dark:text-white sm:hidden"
+            className="absolute bottom-4 left-4 rounded-lg border border-blue-100 bg-white/90 px-3 py-2 text-sm font-medium text-foreground backdrop-blur-sm sm:hidden"
           >
             {hoveredLocation}
           </motion.div>
@@ -262,7 +258,7 @@ function MapPoint({
             <div className="flex h-full items-center justify-center">
               <span
                 className={cn(
-                  "rounded-md border border-gray-200 bg-white/95 px-2 py-0.5 text-xs font-medium text-black shadow-sm dark:border-gray-700 dark:bg-black/95 dark:text-white",
+                  "rounded-md border border-blue-100 bg-white/95 px-2 py-0.5 text-xs font-medium text-foreground shadow-sm",
                   labelClassName
                 )}
               >

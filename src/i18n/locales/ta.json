@@ -1,147 +1,162 @@
 {
   "nav": {
-    "home": "முகப்பு",
-    "services": "சேவைகள்",
-    "projects": "திட்டங்கள்",
-    "about": "எங்களைப் பற்றி",
-    "contact": "தொடர்பு"
+    "home": "Home",
+    "company": "Company",
+    "companyAbout": "About Us",
+    "companyExperts": "Our Experts",
+    "joinBe": "Join Buildora",
+    "services": "Services",
+    "projects": "Projects",
+    "packages": "Packages",
+    "packagesSamples": "Samples",
+    "packagesRates": "Rates",
+    "packagesExplore": "Explore",
+    "resources": "Resources",
+    "resourcesApprovals": "Approvals & Compliance",
+    "resourcesArchi": "Architecture Gallery",
+    "resourcesInterior": "Interior Gallery",
+    "resourcesConsultation": "Free Consultation",
+    "learningHub": "Learning Hub",
+    "contact": "Contact Us",
+    "quickLinks": "Quick Links",
+    "overview": "Overview"
   },
   "hero": {
-    "title": "நாங்கள் பயனுள்ள மற்றும் நம்பகமான தீர்வுகளை வழங்குகிறோம்",
-    "subtitle": "கட்டுமான சேவைகள்",
-    "getStarted": "தொடங்குங்கள்",
-    "explore": "ஆராயுங்கள்"
+    "title": "Engineering enduring spaces across Sri Lanka",
+    "subtitle": "construction specialists",
+    "getStarted": "Start a Project",
+    "explore": "Explore"
   },
   "stats": {
-    "projects": "திட்டங்கள்",
-    "clients": "வாடிக்கையாளர்கள்",
-    "staff": "ஊழியர்கள்",
-    "satisfaction": "திருப்தி"
+    "projects": "Signatures Delivered",
+    "clients": "Partners",
+    "staff": "Specialists",
+    "satisfaction": "Satisfaction"
   },
   "services": {
-    "title": "முழுமையான சேவைகள்",
-    "subtitle": "சேவைகள்",
-    "planning": "திட்ட திட்டமிடல்",
-    "planningDesc": "வெற்றிகரமான கட்டுமான செயல்பாட்டிற்கான மூலோபாய திட்டமிடல் மற்றும் திட்ட மேலாண்மை.",
-    "contracting": "பொது ஒப்பந்தம்",
-    "contractingDesc": "அடித்தளம் முதல் இறுதி தொடுதல் வரை முழுமையான ஒப்பந்த சேவைகள்.",
-    "renovation": "புதுப்பித்தல்",
-    "renovationDesc": "எங்கள் நிபுணர் புதுப்பித்தல் சேவைகளுடன் இருக்கும் இடங்களை மாற்றுங்கள்.",
-    "infrastructure": "உள்கட்டமைப்பு திட்டங்கள்",
-    "infrastructureDesc": "பெரிய அளவிலான உள்கட்டமைப்பு மேம்பாடு மற்றும் சிவில் பொறியியல் திட்டங்கள்.",
-    "learnMore": "மேலும் அறிக"
+    "title": "Solutions shaped around your build agenda",
+    "subtitle": "Services",
+    "planning": "Project Planning",
+    "planningDesc": "Discovery, feasibility, and delivery roadmaps backed by data-rich modelling.",
+    "contracting": "General Contracting",
+    "contractingDesc": "Integrated design-build teams managing procurement, trades, and site execution.",
+    "renovation": "Renovations",
+    "renovationDesc": "Adaptive reuse and interior restructures crafted to refresh commercial assets.",
+    "infrastructure": "Infrastructure Projects",
+    "infrastructureDesc": "Civil, utilities, and public realm upgrades orchestrated with minimal disruption.",
+    "learnMore": "View Packages"
   },
   "team": {
-    "title": "எங்கள் நம்பகமான மற்றும் திறமையான ஒப்பந்ததாரர்களை சந்திக்கவும்",
-    "subtitle": "நம்பகமான மற்றும் அனுபவமிக்க ஒப்பந்ததாரர்களின் குழு"
+    "title": "Meet the Buildora Engineers collective",
+    "subtitle": "A team of designers, planners, and delivery specialists"
   },
   "quality": {
-    "title": "தோற்கடிக்க முடியாத விதிவிலக்கான தரம்",
-    "description": "நாங்கள் திட்டங்களை இணையற்ற தரம், துல்லியம் மற்றும் விவரங்களுக்கு கவனத்துடன் வழங்குகிறோம். சிறப்பிற்கான எங்கள் அர்ப்பணிப்பு ஒவ்வொரு கட்டுமானமும் மிக உயர்ந்த தரங்களை பூர்த்தி செய்வதை உறுதி செய்கிறது."
+    "title": "Quality engineered for longevity",
+    "description": "From structural cores to bespoke finishes, every Buildora project is governed by rigorous QA frameworks, supplier vetting, and digital traceability."
   },
   "cta": {
-    "title": "தயாரா? இன்று ஒரு மேற்கோளைப் பெறுங்கள்",
-    "button": "மேற்கோள் பெறுங்கள்",
-    "contact": "எங்களை தொடர்பு கொள்ளுங்கள்"
+    "title": "Ready to shape your next space?",
+    "button": "Get a Custom Proposal",
+    "contact": "Talk to Buildora"
   },
   "projects": {
-    "title": "எங்கள் சமீபத்திய திட்டத்தைப் பாருங்கள்",
-    "subtitle": "சமீபத்திய திட்டங்கள்",
-    "viewAll": "அனைத்து திட்டங்களையும் பார்க்கவும்"
+    "title": "Explore recent Buildora signatures",
+    "subtitle": "Latest Projects",
+    "viewAll": "View All Projects"
   },
   "testimonials": {
-    "title": "எங்கள் வாடிக்கையாளர்கள் எங்களைப் பற்றி என்ன சொல்கிறார்கள்",
-    "subtitle": "சான்றுகள்"
+    "title": "Voices from Buildora partners",
+    "subtitle": "Testimonials"
   },
   "news": {
-    "title": "சமீபத்திய செய்திகள் மற்றும் கட்டுரைகள்",
-    "subtitle": "செய்திகள் மற்றும் கட்டுரைகள்",
-    "readMore": "மேலும் வாசிக்க"
+    "title": "Latest news & insights",
+    "subtitle": "News & Articles",
+    "readMore": "Read More"
   },
   "footer": {
-    "tagline": "நாளையை கட்டுதல், இன்று",
-    "quickLinks": "விரைவு இணைப்புகள்",
-    "contactInfo": "தொடர்பு தகவல்",
-    "phone": "தொலைபேசி",
-    "email": "மின்னஞ்சல்",
-    "address": "முகவரி",
-    "followUs": "எங்களைப் பின்தொடரவும்",
-    "rights": "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை",
-    "brandName": "DreamLanka",
-    "brandDescription": "2005 முதல் மேன்மையை கட்டமைத்து வருகிறோம். புதுமையான கட்டுமான தீர்வுகள் மற்றும் சிறப்பான கைவினை திறனுடன் உங்கள் கனவுகளை நிஜமாக்குகிறோம்.",
-    "contactTitle": "எங்களை தொடர்பு கொள்ளுங்கள்",
-    "hoverText": "DreamLanka",
+    "tagline": "Building tomorrow, today",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved",
+    "brandName": "Buildora Engineers",
+    "brandDescription": "Engineering distinctive spaces across Sri Lanka with precision construction, vibrant design, and trusted partnerships.",
+    "contactTitle": "Contact Us",
+    "hoverText": "Buildora",
     "sections": {
       "services": {
-        "title": "எங்கள் சேவைகள்",
+        "title": "Our Services",
         "links": [
-          "வணிக கட்டுமானம்",
-          "வசதிக்குடியிருப்பு கட்டிடம்",
-          "புதுப்பிப்பு மற்றும் மறுகட்டமைப்பு",
-          "அளவளாவமைப்பு திட்டங்கள்"
+          "Commercial Construction",
+          "Residential Building",
+          "Renovation & Remodeling",
+          "Infrastructure Projects"
         ]
       },
       "company": {
-        "title": "நிறுவனம்",
+        "title": "Company",
         "links": [
-          "எங்களைப் பற்றி",
-          "எங்கள் குழு",
-          "வேலைவாய்ப்புகள்",
-          "மேற்கோள் பெறுங்கள்"
+          "About Us",
+          "Our Experts",
+          "Careers",
+          "Join Buildora"
         ]
       }
     },
     "contact": {
-      "email": "info@dreamlanka.com",
-      "phone": "+1 (555) 123-4567",
-      "address": "123 கட்டுமான அவென்யூ, பில்டிங் சிட்டி, BC 12345"
+      "email": "hello@buildoraengineers.com",
+      "phone": "+94 21 456 7890",
+      "address": "KKS Road, Nallur, Jaffna 40000, Sri Lanka"
     }
   },
   "contact": {
-    "title": "தொடர்பு கொள்ளுங்கள்",
-    "name": "பெயர்",
-    "email": "மின்னஞ்சல்",
-    "subject": "பொருள்",
-    "message": "செய்தி",
-    "send": "செய்தி அனுப்பு",
-    "info": "தொடர்பு தகவல்",
-    "office": "அலுவலக முகவரி"
+    "title": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "info": "Contact Information",
+    "office": "Office Address"
   },
   "about": {
-    "title": "ConstructlyX பற்றி",
-    "mission": "எங்கள் பணி",
-    "missionText": "எதிர்பார்ப்புகளை மீறும் மற்றும் எங்கள் வாடிக்கையாளர்களுடன் நீடித்த உறவுகளை உருவாக்கும் விதிவிலக்கான கட்டுமான தீர்வுகளை வழங்குவது.",
-    "vision": "எங்கள் பார்வை",
-    "visionText": "தரம் மற்றும் நிலைத்தன்மையில் புதிய தரங்களை அமைக்கும் மிகவும் நம்பகமான மற்றும் புதுமையான கட்டுமான நிறுவனமாக இருப்பது.",
-    "values": "எங்கள் மதிப்புகள்",
-    "timeline": "நிறுவன வளர்ச்சி காலவரிசை"
+    "title": "About Buildora Engineers",
+    "mission": "Our Mission",
+    "missionText": "Deliver distinctive, resilient spaces through collaborative design, responsible construction, and transparent partnerships.",
+    "vision": "Our Vision",
+    "visionText": "To be Sri Lanka’s most trusted construction collaborator, fusing innovation with craftsmanship on every build.",
+    "values": "Our Values",
+    "timeline": "Company Growth Timeline"
   },
   "home": {
     "mission": {
-      "label": "எங்கள் பணி",
-      "title": "நாளையை இன்று கட்டுவோம்",
-      "description": "எங்கள் வாடிக்கையாளர்களின் எதிர்பார்ப்புகளை மீறி, ஒவ்வொரு திட்டத்திலும் பாதுகாப்பு, தரம் மற்றும் புதுமையை உறுதி செய்யும் சிறப்பான கட்டுமான சேவைகளை வழங்க முழுமையாக அர்ப்பணிக்கப்பட்டுள்ளோம்.",
+      "label": "Our Mission",
+      "title": "Building tomorrow, today",
+      "description": "We combine ingenuity, rigorous planning, and field precision to deliver projects that serve communities and investors alike.",
       "points": [
-        "பல ஆண்டுகால அனுபவத்துடன் கூடிய நிபுணத்துவ கைவினை",
-        "சான்றளிக்கப்பட்ட வல்லுநர்களின் அர்ப்பணிப்பு கொண்ட குழு",
-        "அதிநவீன தொழில்நுட்பமும் சமகால உபகரணங்களும்"
+        "Expert craftsmanship with decades of experience",
+        "Dedicated team of certified professionals",
+        "Cutting-edge technology and modern equipment"
       ],
-      "cta": "எங்களைப் பற்றி மேலும் அறியுங்கள்",
+      "cta": "Discover Buildora",
       "cards": [
         {
-          "title": "மேன்மை",
-          "description": "சிறந்த கட்டுமான தரத்தை வழங்குதல்",
-          "tag": "எங்கள் தரநிலை"
+          "title": "Excellence",
+          "description": "Delivering superior construction quality",
+          "tag": "Our Standard"
         },
         {
-          "title": "பாதுகாப்பே முதன்மை",
-          "description": "உயிர்களையும் சொத்துக்களையும் பாதுகாப்பது",
-          "tag": "பூஜ்ய விபத்துகள்"
+          "title": "Safety First",
+          "description": "Protecting lives and property",
+          "tag": "Zero Accidents"
         },
         {
-          "title": "புதுமை",
-          "description": "நவீன முறைகளும் தொழில்நுட்பமும்",
-          "tag": "எதிர்காலத்திற்குத் தயாராக"
+          "title": "Innovation",
+          "description": "Modern techniques and technology",
+          "tag": "Future Ready"
         }
       ]
     }

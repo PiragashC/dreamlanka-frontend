@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { EtherealShadow } from './etheral-shadow';
+import { useMediaQuery } from 'usehooks-ts';
 
 // Enhanced Animated Number Component
 const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string }) => {
@@ -61,37 +62,39 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
 function HeroAnimatedBackground({
   active,
   reducedMotion,
+  isMobile,
 }: {
   active: boolean;
   reducedMotion: boolean;
+  isMobile: boolean;
 }) {
   const gradientLayers = [
-    'radial-gradient(circle at 12% 25%, hsl(var(--primary) / 0.36), transparent 58%)',
-    'radial-gradient(circle at 78% 18%, hsl(var(--primary) / 0.28), transparent 60%)',
-    'radial-gradient(circle at 48% 82%, hsl(var(--accent) / 0.2), transparent 70%)',
+    'radial-gradient(circle at 12% 25%, hsl(var(--accent) / 0.35), transparent 58%)',
+    'radial-gradient(circle at 78% 18%, hsl(var(--primary) / 0.3), transparent 62%)',
+    'radial-gradient(circle at 48% 82%, hsl(var(--accent) / 0.18), transparent 72%)',
   ];
 
   const staticLayers = (
     <>
-      <div className="absolute inset-0 bg-gradient-to-br from-background/12 via-background/36 to-background/78 backdrop-blur-[1px]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-white/30 backdrop-blur-[1px]" />
       <div
         className="absolute inset-0 mix-blend-screen"
         style={{
           backgroundImage:
-            'radial-gradient(circle at 20% 12%, hsl(var(--primary) / 0.28), transparent 55%)',
+            'radial-gradient(circle at 20% 12%, rgba(15,23,42,0.14), transparent 55%)',
         }}
       />
       <div
         className="absolute inset-0 mix-blend-multiply"
         style={{
           backgroundImage:
-            'radial-gradient(circle at 80% 88%, hsl(var(--background) / 0.38), transparent 70%)',
+            'radial-gradient(circle at 80% 88%, rgba(249,115,22,0.16), transparent 72%)',
         }}
       />
     </>
   );
 
-  if (reducedMotion) {
+  if (reducedMotion || isMobile) {
     return <div className="relative h-full w-full overflow-hidden">{staticLayers}</div>;
   }
 
@@ -101,11 +104,11 @@ function HeroAnimatedBackground({
         <EtherealShadow
           sizing="fill"
           hideHeading
-          color="hsl(var(--primary) / 0.35)"
+          color="hsl(var(--accent) / 0.55)"
           animation={{ scale: 82, speed: 60 }}
           noise={{ opacity: 0.4, scale: 1.15 }}
           gradientLayers={gradientLayers}
-          backgroundImage="linear-gradient(145deg, hsl(var(--background) / 0.9), hsl(var(--primary) / 0.45))"
+          backgroundImage="linear-gradient(145deg, rgba(15,23,42,0.08), rgba(249,115,22,0.1))"
           noiseBlendMode="soft-light"
           className="absolute inset-0 z-0"
         />
@@ -132,7 +135,7 @@ function HeroContent() {
   return (
     <div className="flex w-full flex-col gap-10 text-foreground">
       <div className="w-full">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-wide text-clean-white">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-foreground">
           <span className="block">{t("hero.title")}</span>
           <span className="mt-4 flex min-h-[60px] items-center justify-start">
             <TextRotate
@@ -144,7 +147,7 @@ function HeroContent() {
                 "Success",
                 "Reliability"
               ]}
-              mainClassName="text-primary bg-foreground px-8 py-4 rounded-xl inline-block shadow-lg font-bold min-w-fit whitespace-nowrap"
+              mainClassName="text-white bg-accent px-8 py-4 rounded-xl inline-block shadow-lg font-bold min-w-fit whitespace-nowrap"
               staggerFrom="last"
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -156,14 +159,14 @@ function HeroContent() {
             />
           </span>
         </h1>
-        <div className="relative mt-6 inline-flex items-center gap-3 overflow-hidden rounded-full border border-white/10 bg-white/5 px-6 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white shadow-[0_0_25px_rgba(255,255,255,0.35)]">
-          <span className="absolute inset-0 -z-10 blur-3xl bg-primary/30" />
+        <div className="relative mt-6 inline-flex items-center gap-3 overflow-hidden rounded-full border border-accent/20 bg-accent/10 px-6 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent shadow-[0_16px_35px_rgba(15,23,42,0.12)]">
+          <span className="absolute inset-0 -z-10 blur-2xl bg-primary/20" />
           <span className="relative">CONSTRUCTION \ BUILDING \ DESIGN \ QUALITY \ TRUST</span>
         </div>
       </div>
 
       <div className="flex w-full flex-col items-start">
-        <p className="mb-6 max-w-xl rounded-3xl border border-border/50 bg-gradient-to-br from-primary/12 via-background/45 to-background/22 px-7 py-6 text-base leading-relaxed text-foreground/85 shadow-[0_18px_48px_rgba(15,23,42,0.18)] backdrop-blur-lg">
+        <p className="mb-6 max-w-xl rounded-3xl border border-accent/10 bg-white px-7 py-6 text-base leading-relaxed text-foreground shadow-[0_18px_48px_rgba(15,23,42,0.1)]">
           Transforming visions into reality with innovative construction solutions and exceptional craftsmanship that stands the test of time.
         </p>
         <div className="flex pointer-events-auto flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-3">
@@ -180,14 +183,26 @@ function HeroContent() {
   );
 }
 
-const HeroVisual = () => {
+const HeroVisual = ({ isMobile }: { isMobile: boolean }) => {
+  const baseClass =
+    "w-full min-h-[320px] overflow-hidden rounded-[2.5rem] border border-blue-100 bg-cover bg-center shadow-[0_30px_80px_rgba(15,23,42,0.12)] md:min-h-[480px] lg:min-h-[660px] xl:min-h-[720px]";
+  const style = {
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=2200&q=80')",
+  };
+
+  if (isMobile) {
+    return (
+      <div className={baseClass} style={style}>
+        <div className="h-full w-full bg-gradient-to-br from-white/50 via-transparent to-blue-100/60" />
+      </div>
+    );
+  }
+
   return (
     <motion.div
-      className="w-full min-h-[380px] overflow-hidden rounded-[3rem] border border-white/10 bg-cover bg-center shadow-[0_50px_120px_rgba(15,23,42,0.45)] md:min-h-[560px] lg:min-h-[660px] xl:min-h-[720px]"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=2200&q=80')",
-      }}
+      className={baseClass}
+      style={style}
       initial={{
         clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
       }}
@@ -196,16 +211,16 @@ const HeroVisual = () => {
       }}
       transition={{ duration: 1.1, ease: 'circOut' }}
     >
-      <div className="h-full w-full bg-gradient-to-br from-background/18 via-transparent to-background/65 mix-blend-multiply" />
+      <div className="h-full w-full bg-gradient-to-br from-white/50 via-transparent to-blue-100/60" />
     </motion.div>
   );
 };
 
 const StatsSection = () => (
-  <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-primary/10 py-20">
-    <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent" />
-    <div className="pointer-events-none absolute top-0 left-1/5 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-    <div className="pointer-events-none absolute bottom-0 right-1/5 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+  <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50/60 to-white py-20">
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary/15 to-transparent" />
+    <div className="pointer-events-none absolute top-0 left-1/5 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
+    <div className="pointer-events-none absolute bottom-0 right-1/5 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
 
     <div className="relative z-10 container mx-auto px-4">
       <motion.div
@@ -214,7 +229,7 @@ const StatsSection = () => (
         viewport={{ once: true }}
         className="mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-accent mb-6">
           Our Achievements
         </h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -242,7 +257,7 @@ const StatsSection = () => (
             viewport={{ once: true }}
             className="group"
           >
-            <div className="relative rounded-2xl border border-border/50 bg-card/50 p-8 text-center backdrop-blur-sm transition-all duration-500 hover:border-primary/50 hover:bg-card/80 hover:shadow-[0_30px_80px_rgba(15,23,42,0.25)]">
+            <div className="relative rounded-2xl border border-blue-100 bg-white p-8 text-center shadow-[0_20px_45px_rgba(15,23,42,0.08)] transition-all duration-500 hover:border-primary/60 hover:shadow-[0_30px_80px_rgba(15,23,42,0.15)]">
               <motion.div
                 initial={{ scale: 0, rotate: -180 }}
                 whileInView={{ scale: 1, rotate: 0 }}
@@ -257,7 +272,7 @@ const StatsSection = () => (
                 whileInView={{ scale: 1 }}
                 transition={{ delay: index * 0.15 + 0.45, duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-4xl font-bold text-transparent md:text-5xl"
+                className="bg-gradient-to-r from-primary to-accent bg-clip-text text-4xl font-bold text-transparent md:text-5xl"
               >
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </motion.h3>
@@ -271,7 +286,7 @@ const StatsSection = () => (
                 {stat.label}
               </motion.p>
               <div className="pointer-events-none absolute top-2 right-2 h-2 w-2 rounded-full bg-primary/30 transition-colors duration-300 group-hover:bg-primary/60" />
-              <div className="pointer-events-none absolute bottom-2 left-2 h-1 w-1 rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/40" />
+              <div className="pointer-events-none absolute bottom-2 left-2 h-1 w-1 rounded-full bg-accent/20 transition-colors duration-300 group-hover:bg-accent/40" />
             </div>
           </motion.div>
         ))}
@@ -284,14 +299,14 @@ const StatsSection = () => (
         viewport={{ once: true }}
         className="mt-16 text-center"
       >
-        <div className="mx-auto max-w-2xl rounded-xl border border-primary/20 bg-primary/5 p-6">
-          <p className="text-lg text-muted-foreground">
+        <div className="mx-auto max-w-2xl rounded-xl border border-blue-100 bg-white p-6 shadow-[0_20px_45px_rgba(15,23,42,0.08)]">
+          <p className="text-lg text-foreground/80">
             "Building dreams, creating futures, and delivering excellence since our inception."
           </p>
           <div className="mt-4 flex items-center justify-center space-x-2">
             <div className="h-2 w-2 rounded-full bg-primary" />
-            <div className="h-2 w-2 rounded-full bg-primary/60" />
-            <div className="h-2 w-2 rounded-full bg-primary/40" />
+            <div className="h-2 w-2 rounded-full bg-accent/70" />
+            <div className="h-2 w-2 rounded-full bg-accent/40" />
           </div>
         </div>
       </motion.div>
@@ -301,11 +316,13 @@ const StatsSection = () => (
 
 const HeroSection = () => {
   const prefersReducedMotion = useReducedMotion();
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const [backgroundActive, setBackgroundActive] = useState(false);
   const backgroundRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || isMobile) {
+      setBackgroundActive(false);
       return;
     }
     const container = backgroundRef.current;
@@ -324,25 +341,29 @@ const HeroSection = () => {
     );
     observer.observe(container);
     return () => observer.disconnect();
-  }, [prefersReducedMotion]);
+  }, [prefersReducedMotion, isMobile]);
 
   return (
     <div className="relative overflow-hidden bg-background">
       <div className="absolute inset-0" ref={backgroundRef}>
-        <HeroAnimatedBackground active={backgroundActive} reducedMotion={prefersReducedMotion} />
+        <HeroAnimatedBackground
+          active={backgroundActive}
+          reducedMotion={prefersReducedMotion}
+          isMobile={isMobile}
+        />
       </div>
 
       <motion.section
-        className="relative z-10 container mx-auto flex flex-col items-center gap-12 px-4 py-24 md:flex-row md:items-stretch md:justify-between md:px-6 lg:px-8"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
+        className="relative z-10 container mx-auto flex flex-col items-center gap-12 px-4 pb-20 pt-32 md:flex-row md:items-stretch md:justify-between md:px-6 md:pb-24 md:pt-28 lg:px-8"
+        initial={prefersReducedMotion || isMobile ? false : { opacity: 0, y: 40 }}
+        animate={prefersReducedMotion || isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         <div className="w-full md:w-[58%] lg:w-[55%]">
           <HeroContent />
         </div>
         <div className="w-full md:w-[42%] lg:w-[40%]">
-          <HeroVisual />
+          <HeroVisual isMobile={isMobile} />
         </div>
       </motion.section>
 

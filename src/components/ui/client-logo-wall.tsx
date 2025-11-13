@@ -15,132 +15,132 @@ const CLIENT_BADGES: ClientBadge[] = [
     name: "Caterpillar",
     tagline: "Heavy Machinery",
     initials: "CAT",
-    gradient: "from-amber-500/80 via-orange-500/70 to-amber-400/70",
+    gradient: "from-primary/90 via-primary/75 to-primary/60",
   },
   {
     name: "Volvo Construction",
     tagline: "Smart Vehicles",
     initials: "VOL",
-    gradient: "from-sky-500/80 via-blue-500/70 to-slate-500/70",
+    gradient: "from-accent/90 via-accent/75 to-blue-600/65",
   },
   {
     name: "Hitachi",
     tagline: "Industrial Systems",
     initials: "HIT",
-    gradient: "from-rose-500/80 via-amber-500/70 to-orange-500/70",
+    gradient: "from-primary/85 via-primary/70 to-orange-400/60",
   },
   {
     name: "Bosch",
     tagline: "Power Tools",
     initials: "BOS",
-    gradient: "from-emerald-500/80 via-green-500/70 to-teal-500/70",
+    gradient: "from-accent/90 via-blue-700/75 to-blue-500/60",
   },
   {
     name: "Autodesk",
     tagline: "Design Software",
     initials: "ADS",
-    gradient: "from-cyan-500/80 via-blue-500/70 to-indigo-500/70",
+    gradient: "from-primary/88 via-primary/72 to-accent/60",
   },
   {
     name: "SketchUp",
     tagline: "3D Modeling",
     initials: "SKU",
-    gradient: "from-pink-500/80 via-purple-500/70 to-indigo-500/70",
+    gradient: "from-accent/90 via-blue-700/75 to-blue-500/60",
   },
   {
     name: "Microsoft",
     tagline: "Productivity Stack",
     initials: "MS",
-    gradient: "from-blue-500/80 via-blue-400/70 to-sky-400/70",
+    gradient: "from-accent/88 via-blue-600/72 to-sky-400/60",
   },
   {
     name: "Google Cloud",
     tagline: "Cloud Platform",
     initials: "GCP",
-    gradient: "from-amber-500/80 via-blue-500/70 to-green-500/70",
+    gradient: "from-primary/90 via-primary/72 to-accent/58",
   },
   {
     name: "Amazon AWS",
     tagline: "Infrastructure",
     initials: "AWS",
-    gradient: "from-orange-500/80 via-amber-500/70 to-yellow-500/70",
+    gradient: "from-primary/90 via-primary/75 to-yellow-400/60",
   },
   {
     name: "Docker",
     tagline: "Containers",
     initials: "DKR",
-    gradient: "from-sky-500/80 via-blue-500/70 to-sky-400/70",
+    gradient: "from-accent/90 via-blue-700/75 to-blue-500/60",
   },
   {
     name: "Kubernetes",
     tagline: "Orchestration",
     initials: "K8S",
-    gradient: "from-indigo-500/80 via-blue-500/70 to-indigo-400/70",
+    gradient: "from-accent/90 via-blue-700/75 to-blue-500/60",
   },
   {
     name: "GitHub",
     tagline: "Version Control",
     initials: "GH",
-    gradient: "from-neutral-800/90 via-neutral-700/80 to-neutral-600/80",
+    gradient: "from-accent/95 via-accent/80 to-blue-600/65",
   },
   {
     name: "GitLab",
     tagline: "DevOps Platform",
     initials: "GL",
-    gradient: "from-orange-500/80 via-rose-500/70 to-pink-500/70",
+    gradient: "from-primary/88 via-primary/72 to-orange-400/60",
   },
   {
     name: "Prometheus",
     tagline: "Monitoring",
     initials: "PRO",
-    gradient: "from-orange-500/80 via-red-500/70 to-rose-500/70",
+    gradient: "from-primary/85 via-primary/70 to-orange-400/60",
   },
   {
     name: "Grafana",
     tagline: "Observability",
     initials: "GRA",
-    gradient: "from-amber-500/80 via-orange-500/70 to-pink-500/70",
+    gradient: "from-primary/85 via-primary/70 to-accent/60",
   },
   {
     name: "Elastic",
     tagline: "Search & Analytics",
     initials: "ELS",
-    gradient: "from-teal-500/80 via-sky-500/70 to-yellow-500/70",
+    gradient: "from-primary/88 via-primary/72 to-accent/58",
   },
   {
     name: "MongoDB",
     tagline: "Document Database",
     initials: "MDB",
-    gradient: "from-emerald-500/80 via-green-500/70 to-lime-500/70",
+    gradient: "from-accent/92 via-blue-700/75 to-blue-500/60",
   },
   {
     name: "PostgreSQL",
     tagline: "Relational Database",
     initials: "PG",
-    gradient: "from-blue-600/80 via-blue-500/70 to-sky-500/70",
+    gradient: "from-accent/90 via-blue-700/75 to-blue-500/60",
   },
   {
     name: "React",
     tagline: "Frontend",
     initials: "RE",
-    gradient: "from-sky-500/80 via-cyan-500/70 to-emerald-500/70",
+    gradient: "from-accent/88 via-blue-600/72 to-sky-400/60",
   },
   {
     name: "Node.js",
     tagline: "Backend Runtime",
     initials: "NJ",
-    gradient: "from-emerald-500/80 via-green-500/70 to-lime-500/70",
+    gradient: "from-accent/88 via-blue-600/72 to-sky-400/60",
   },
   {
     name: "TypeScript",
     tagline: "Language",
     initials: "TS",
-    gradient: "from-blue-500/80 via-blue-400/70 to-indigo-500/70",
+    gradient: "from-accent/90 via-blue-700/75 to-blue-500/60",
   },
 ];
 
 const tileBase =
-  "relative flex h-28 flex-col items-center justify-center overflow-hidden rounded-2xl border border-border/60 bg-card/80 px-4 py-3 text-center shadow-[0_18px_35px_rgba(8,11,30,0.18)] transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_22px_45px_rgba(8,11,30,0.25)]";
+  "relative flex h-28 flex-col items-center justify-center overflow-hidden rounded-2xl border border-blue-100 bg-white px-4 py-3 text-center shadow-[0_18px_35px_rgba(15,23,42,0.08)] transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_22px_45px_rgba(15,23,42,0.15)]";
 
 export const ClientLogoWall = () => {
   return (
@@ -155,7 +155,7 @@ export const ClientLogoWall = () => {
                 `bg-gradient-to-r ${badge.gradient}`
               )}
             />
-            <span className="relative z-10 text-xl font-semibold tracking-wide text-clean-white">
+            <span className="relative z-10 text-xl font-semibold tracking-wide text-white drop-shadow-sm">
               {badge.initials}
             </span>
             <span className="relative z-10 mt-2 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground/80">

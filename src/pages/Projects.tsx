@@ -92,7 +92,7 @@ const PROJECT_CATEGORIES: ProjectCategory[] = [
           { icon: <Users className="h-6 w-6 text-indigo-400" />, size: "md" },
         ],
         className:
-          "bg-gradient-to-br from-sky-50/70 to-blue-50/40 dark:from-white/5 dark:to-white/[0.08] border border-sky-200/30 dark:border-sky-500/20",
+          "bg-gradient-to-br from-sky-50/70 to-blue-50/40 border border-blue-200/30",
       },
       {
         title: "Sustainability at scale",
@@ -104,7 +104,7 @@ const PROJECT_CATEGORIES: ProjectCategory[] = [
           { icon: <Factory className="h-6 w-6 text-slate-400" />, size: "md" },
         ],
         className:
-          "bg-gradient-to-br from-emerald-50/70 via-white/60 to-emerald-100/40 dark:from-white/5 dark:via-white/[0.04] dark:to-white/[0.02] border border-emerald-200/20 dark:border-emerald-500/15",
+          "bg-gradient-to-br from-emerald-50/70 via-white/60 to-emerald-100/40 border border-emerald-200/20",
       },
     ],
     projects: [
@@ -214,7 +214,7 @@ const PROJECT_CATEGORIES: ProjectCategory[] = [
           { icon: <ShieldCheck className="h-6 w-6 text-emerald-400" />, size: "md" },
         ],
         className:
-          "bg-gradient-to-br from-rose-50/70 via-amber-50/40 to-rose-100/30 dark:from-white/5 dark:via-white/[0.04] dark:to-white/[0.02] border border-rose-200/30 dark:border-rose-500/20",
+          "bg-gradient-to-br from-rose-50/70 via-amber-50/40 to-rose-100/30 border border-rose-200/30",
       },
       {
         title: "Connected sanctuaries",
@@ -226,7 +226,7 @@ const PROJECT_CATEGORIES: ProjectCategory[] = [
           { icon: <LineChart className="h-6 w-6 text-emerald-400" />, size: "md" },
         ],
         className:
-          "bg-gradient-to-br from-indigo-50/70 to-blue-50/40 dark:from-white/5 dark:to-white/[0.08] border border-indigo-200/30 dark:border-indigo-500/15",
+          "bg-gradient-to-br from-indigo-50/70 to-blue-50/40 border border-indigo-200/30",
       },
     ],
     projects: [
@@ -336,7 +336,7 @@ const PROJECT_CATEGORIES: ProjectCategory[] = [
           { icon: <ShieldCheck className="h-6 w-6 text-sky-400" />, size: "md" },
         ],
         className:
-          "bg-gradient-to-br from-emerald-50/70 via-white/50 to-emerald-100/30 dark:from-white/5 dark:via-white/[0.05] dark:to-white/[0.02] border border-emerald-200/25 dark:border-emerald-500/15",
+          "bg-gradient-to-br from-emerald-50/70 via-white/50 to-emerald-100/30 border border-emerald-200/25",
       },
       {
         title: "Operational resilience",
@@ -348,7 +348,7 @@ const PROJECT_CATEGORIES: ProjectCategory[] = [
           { icon: <Users className="h-6 w-6 text-slate-400" />, size: "md" },
         ],
         className:
-          "bg-gradient-to-br from-slate-50/80 via-sky-50/40 to-slate-100/30 dark:from-white/5 dark:via-white/[0.04] dark:to-white/[0.02] border border-slate-200/30 dark:border-sky-500/15",
+          "bg-gradient-to-br from-slate-50/80 via-sky-50/40 to-slate-100/30 border border-slate-200/30",
       },
     ],
     projects: [
@@ -630,7 +630,7 @@ const Projects = () => {
                       icons={highlight.icons}
                       className={cn(
                         "max-w-full bg-card/80 text-left",
-                        "border border-border/50 dark:border-border/60",
+                        "border border-border/50",
                         highlight.className
                       )}
                     />

@@ -6,7 +6,7 @@ const AppSuspenseFallback = () => {
       <div className="flex items-center gap-3">
         <Loader2 className="h-6 w-6 animate-spin text-primary" aria-hidden="true" />
         <span className="text-sm font-medium tracking-wide uppercase">
-          Loading DreamLanka experience…
+          Loading Buildora Engineers experience…
         </span>
       </div>
     </div>
