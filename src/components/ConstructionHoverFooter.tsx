@@ -9,15 +9,37 @@ import {
   Instagram,
   Twitter,
   Linkedin,
+  Youtube,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { FooterBackgroundGradient, TextHoverEffect } from "@/components/ui/hover-footer";
 
 const SOCIAL_LINKS = [
-  { Icon: Facebook, label: "Facebook", href: "#" },
-  { Icon: Instagram, label: "Instagram", href: "#" },
-  { Icon: Twitter, label: "Twitter", href: "#" },
-  { Icon: Linkedin, label: "LinkedIn", href: "#" },
+  {
+    Icon: Facebook,
+    label: "Facebook",
+    href: "https://www.facebook.com/BuildoraEngineers",
+  },
+  {
+    Icon: Instagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/BuildoraEngineers",
+  },
+  {
+    Icon: Twitter,
+    label: "X (Twitter)",
+    href: "https://twitter.com/BuildoraEng",
+  },
+  {
+    Icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/buildora-engineers",
+  },
+  {
+    Icon: Youtube,
+    label: "YouTube",
+    href: "https://www.youtube.com/@BuildoraEngineers",
+  },
 ];
 
 function ConstructionHoverFooter() {
@@ -56,12 +78,12 @@ function ConstructionHoverFooter() {
       {
         Icon: Mail,
         text: t("footer.contact.email"),
-        href: "mailto:info@dreamlanka.com",
+        href: "mailto:hello@buildoraengineers.com",
       },
       {
         Icon: Phone,
         text: t("footer.contact.phone"),
-        href: "tel:+15551234567",
+        href: "tel:+94214567890",
       },
       {
         Icon: MapPin,
@@ -83,6 +105,8 @@ function ConstructionHoverFooter() {
                 src="/be-logo.png"
                 alt={t("footer.brandName") ?? "Buildora Engineers"}
                 className="h-12 w-auto"
+                width="160"
+                height="48"
                 draggable={false}
               />
               <span className="text-3xl font-bold text-accent">{t("footer.brandName")}</span>
@@ -96,6 +120,8 @@ function ConstructionHoverFooter() {
                   key={label}
                   href={href}
                   aria-label={label}
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-foreground/50 transition-colors hover:text-primary"
                 >
                   <Icon size={20} />
@@ -160,7 +186,7 @@ function ConstructionHoverFooter() {
         {/* Footer bottom */}
         <div className="flex flex-col items-center justify-between space-y-4 text-sm md:flex-row md:space-y-0">
           {/* Quick Links */}
-          <div className="flex space-x-6 text-foreground/60">
+          <div className="flex flex-wrap justify-center gap-4 text-foreground/60 md:justify-start">
             <Link to="/" className="transition-colors hover:text-accent">
               {t("nav.home")}
             </Link>
@@ -175,6 +201,12 @@ function ConstructionHoverFooter() {
             </Link>
             <Link to="/contact" className="transition-colors hover:text-accent">
               {t("nav.contact")}
+            </Link>
+            <Link to="/sitemap" className="transition-colors hover:text-accent">
+              {t("nav.siteMap")}
+            </Link>
+            <Link to="/search" className="transition-colors hover:text-accent">
+              {t("nav.search")}
             </Link>
           </div>
 

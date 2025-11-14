@@ -84,6 +84,8 @@ const NavigationComponent = () => {
             src="/be-logo.png"
             alt="Buildora Engineers logo"
             className="h-20 w-auto"
+            width="200"
+            height="80"
             draggable={false}
           />
           <span className="hidden text-2xl font-semibold tracking-wide text-accent sm:inline">
@@ -185,7 +187,7 @@ const NavigationComponent = () => {
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className="hidden rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:bg-primary/90 lg:inline-flex"
+            className="hidden whitespace-nowrap rounded-full border border-primary bg-white px-5 py-2 text-sm font-semibold text-primary shadow-lg shadow-primary/20 transition hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary/50 lg:inline-flex"
           >
             {t("nav.contact")}
           </Link>
@@ -258,7 +260,7 @@ const NavigationComponent = () => {
             <li>
               <Link
                 to="/contact"
-                className="inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:bg-primary/90"
+                className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-full border border-primary bg-white px-5 py-2 text-sm font-semibold text-primary shadow-lg shadow-primary/20 transition hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary/50"
                 onClick={closeMobile}
               >
                 {t("nav.contact")}

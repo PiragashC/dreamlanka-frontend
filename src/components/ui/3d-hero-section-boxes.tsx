@@ -170,12 +170,12 @@ function HeroContent() {
           Transforming visions into reality with innovative construction solutions and exceptional craftsmanship that stands the test of time.
         </p>
         <div className="flex pointer-events-auto flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-3">
-            <Link
-              to="/contact"
-              className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl bg-primary px-6 sm:px-8 py-2.5 sm:py-3.5 font-semibold text-primary-foreground transition duration-300 hover:bg-primary/90"
-            >
-              {t("hero.getStarted")}
-            </Link>
+          <Link
+            to="/contact"
+            className="inline-flex w-full items-center justify-center rounded-2xl border border-primary bg-primary px-6 py-3 text-base font-semibold text-[#0c1e3a] transition duration-300 hover:bg-primary/90 sm:w-auto sm:px-8"
+          >
+            {t("hero.getStarted")}
+          </Link>
         </div>
       </div>
 

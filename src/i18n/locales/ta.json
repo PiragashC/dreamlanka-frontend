@@ -7,6 +7,7 @@
     "joinBe": "Join Buildora",
     "services": "Services",
     "projects": "Projects",
+    "about": "About",
     "packages": "Packages",
     "packagesSamples": "Samples",
     "packagesRates": "Rates",
@@ -18,6 +19,8 @@
     "resourcesConsultation": "Free Consultation",
     "learningHub": "Learning Hub",
     "contact": "Contact Us",
+    "search": "Search",
+    "siteMap": "Site Map",
     "quickLinks": "Quick Links",
     "overview": "Overview"
   },

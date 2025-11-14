@@ -34,6 +34,7 @@
       content="Buildora Engineers is a trusted Sri Lankan construction partner delivering enduring spaces with orange energy and deep blue confidence."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://buildora-lgn9.onrender.com/" />
     <meta
       property="og:image"
       content="/be-logo.png"
@@ -50,10 +51,108 @@
       name="twitter:image"
       content="/be-logo.png"
     />
+    <link rel="canonical" href="https://buildora-lgn9.onrender.com/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://buildora-lgn9.onrender.com/#organization",
+            "name": "Buildora Engineers",
+            "url": "https://buildora-lgn9.onrender.com/",
+            "logo": "https://buildora-lgn9.onrender.com/be-logo.png",
+            "sameAs": [
+              "https://www.facebook.com/BuildoraEngineers",
+              "https://twitter.com/BuildoraEng",
+              "https://www.instagram.com/BuildoraEngineers",
+              "https://www.linkedin.com/company/buildora-engineers",
+              "https://www.youtube.com/@BuildoraEngineers"
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+94-21-456-7890",
+                "contactType": "customer support",
+                "areaServed": "LK",
+                "availableLanguage": [
+                  "en",
+                  "ta"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://buildora-lgn9.onrender.com/#local-business",
+            "name": "Buildora Engineers",
+            "image": "https://buildora-lgn9.onrender.com/be-logo.png",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "KKS Road, Nallur",
+              "addressLocality": "Jaffna",
+              "postalCode": "40000",
+              "addressCountry": "LK"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 9.6773,
+              "longitude": 80.0188
+            },
+            "url": "https://buildora-lgn9.onrender.com/",
+            "telephone": "+94-21-456-7890",
+            "priceRange": "$$",
+            "areaServed": "Sri Lanka",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/BuildoraEngineers",
+              "https://twitter.com/BuildoraEng",
+              "https://www.instagram.com/BuildoraEngineers",
+              "https://www.linkedin.com/company/buildora-engineers",
+              "https://www.youtube.com/@BuildoraEngineers"
+            ]
+          }
+        ]
+      }
+    </script>
+    <script>
+      (function () {
+        var canonicalHost = "buildora-lgn9.onrender.com";
+        var currentHost = window.location.hostname;
+        if (
+          currentHost &&
+          currentHost !== canonicalHost &&
+          currentHost !== "localhost" &&
+          currentHost !== "127.0.0.1"
+        ) {
+          var newUrl =
+            window.location.protocol +
+            "//" +
+            canonicalHost +
+            window.location.pathname +
+            window.location.search +
+            window.location.hash;
+          window.location.replace(newUrl);
+        }
+      })();
+    </script>
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/entry-client.tsx"></script>
   </body>
 </html>
