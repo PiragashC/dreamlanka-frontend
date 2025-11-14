@@ -1,11 +1,11 @@
 # Instructions for AI or automated agents
-Source: https://buildora-lgn9.onrender.com/
+Source: https://buildora-gfg5.onrender.com/
 Contact: hello@buildoraengineers.com
 
 User-agent: *
 Allow: /
 
 Preferred-citation: "Buildora Engineers — Sri Lanka Construction Experts"
-Sitemap: https://buildora-lgn9.onrender.com/sitemap.xml
-Policies: https://buildora-lgn9.onrender.com/
+Sitemap: https://buildora-gfg5.onrender.com/sitemap.xml
+Policies: https://buildora-gfg5.onrender.com/
 
