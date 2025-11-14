@@ -7,7 +7,7 @@
     "dev": "vite",
     "dev:ssr": "NODE_ENV=development node server.js",
     "build": "npm run build:ssr",
-    "build:ssr": "vite build && vite build --ssr src/entry-server.tsx",
+    "build:ssr": "vite build && vite build --ssr src/entry-server.tsx --outDir dist/server --emptyOutDir false",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
