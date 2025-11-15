@@ -14,6 +14,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 async function startServer() {
   const app = express();
+  app.disable("x-powered-by");
   let vite;
 
   if (!isProd) {
@@ -24,7 +25,18 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     app.use(compression());
-    app.use(serveStatic(resolve("dist/client"), { index: false }));
+    app.use(
+      serveStatic(resolve("dist/client"), {
+        index: false,
+        setHeaders(res, filePath) {
+          if (filePath.endsWith(".html")) {
+            res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
+          } else {
+            res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+          }
+        },
+      })
+    );
   }
 
   app.use("*", async (req, res) => {
@@ -33,20 +45,31 @@ async function startServer() {
     try {
       let template;
       let render;
+      let lastModified = new Date().toUTCString();
 
       if (!isProd) {
-        template = fs.readFileSync(resolve("index.html"), "utf-8");
+        const templatePath = resolve("index.html");
+        template = fs.readFileSync(templatePath, "utf-8");
+        lastModified = fs.statSync(templatePath).mtime.toUTCString();
         template = await vite.transformIndexHtml(url, template);
         render = (await vite.ssrLoadModule("/src/entry-server.tsx")).render;
       } else {
-        template = fs.readFileSync(resolve("dist/client/index.html"), "utf-8");
+        const templatePath = resolve("dist/client/index.html");
+        template = fs.readFileSync(templatePath, "utf-8");
+        lastModified = fs.statSync(templatePath).mtime.toUTCString();
         render = (await import("./dist/server/entry-server.js")).render;
       }
 
       const appHtml = await render(url);
       const html = template.replace(`<!--app-html-->`, appHtml);
 
-      res.status(200).set({ "Content-Type": "text/html" }).end(html);
+      res
+        .status(200)
+        .set({
+          "Content-Type": "text/html",
+          "Last-Modified": lastModified,
+        })
+        .end(html);
     } catch (error) {
       if (!isProd && vite) {
         vite.ssrFixStacktrace(error);
