@@ -19,6 +19,11 @@ async function startServer() {
   app.disable("x-powered-by");
   let vite;
 
+  // Lightweight health endpoint for Render health checks and uptime monitors
+  app.get("/healthz", (_req, res) => {
+    res.status(200).type("text/plain").send("ok");
+  });
+
   if (!isProd) {
     vite = await createViteServer({
       server: { middlewareMode: true },
