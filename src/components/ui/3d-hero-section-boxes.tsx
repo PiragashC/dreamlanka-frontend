@@ -188,7 +188,7 @@ const HeroVisual = ({ isMobile }: { isMobile: boolean }) => {
     "w-full min-h-[320px] overflow-hidden rounded-[2.5rem] border border-blue-100 bg-cover bg-center shadow-[0_30px_80px_rgba(15,23,42,0.12)] md:min-h-[480px] lg:min-h-[660px] xl:min-h-[720px]";
   const style = {
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=2200&q=80')",
+      "url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=1600&q=70')",
   };
 
   if (isMobile) {

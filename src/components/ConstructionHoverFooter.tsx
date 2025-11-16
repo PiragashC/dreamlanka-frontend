@@ -78,7 +78,7 @@ function ConstructionHoverFooter() {
       {
         Icon: Mail,
         text: t("footer.contact.email"),
-        href: "mailto:hello@buildoraengineers.com",
+        href: "mailto:contact@buildoraengineers.com",
       },
       {
         Icon: Phone,
@@ -107,6 +107,8 @@ function ConstructionHoverFooter() {
                 className="h-12 w-auto"
                 width="160"
                 height="48"
+                loading="lazy"
+                decoding="async"
                 draggable={false}
               />
               <span className="text-3xl font-bold text-accent">{t("footer.brandName")}</span>
@@ -164,12 +166,25 @@ function ConstructionHoverFooter() {
                 <li key={text} className="flex items-start space-x-3">
                   <Icon size={18} className="text-primary" />
                   {href ? (
-                    <a
-                      href={href}
-                      className="text-sm text-foreground/70 transition-colors hover:text-accent"
-                    >
-                      {text}
-                    </a>
+                    href.startsWith("mailto:") ? (
+                      <button
+                        type="button"
+                        className="text-left text-sm text-foreground/70 transition-colors hover:text-accent underline-offset-4 hover:underline"
+                        onClick={() => {
+                          const [user, domain] = "contact@buildoraengineers.com".split("@");
+                          window.location.href = `mailto:${user}@${domain}`;
+                        }}
+                      >
+                        {text}
+                      </button>
+                    ) : (
+                      <a
+                        href={href}
+                        className="text-sm text-foreground/70 transition-colors hover:text-accent"
+                      >
+                        {text}
+                      </a>
+                    )
                   ) : (
                     <span className="text-sm text-foreground/70">
                       {text}

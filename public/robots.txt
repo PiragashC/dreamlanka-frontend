@@ -13,5 +13,5 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://buildora-gfg5.onrender.com/sitemap.xml
-LLMS: https://buildora-gfg5.onrender.com/llms.txt
+Sitemap: https://buildoraengineers.com/sitemap.xml
+LLMS: https://buildoraengineers.com/llms.txt

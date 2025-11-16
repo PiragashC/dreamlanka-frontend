@@ -11,9 +11,11 @@ const __dirname = path.dirname(__filename);
 const resolve = (p) => path.resolve(__dirname, p);
 
 const isProd = process.env.NODE_ENV === "production";
+const CANONICAL_HOST = process.env.CANONICAL_HOST || "buildoraengineers.com";
 
 async function startServer() {
   const app = express();
+  app.set("trust proxy", 1);
   app.disable("x-powered-by");
   let vite;
 
@@ -24,6 +26,28 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
+    app.use((req, res, next) => {
+      const host = (req.headers.host || "").split(":")[0];
+      if (host && host !== CANONICAL_HOST) {
+        return res.redirect(301, `https://${CANONICAL_HOST}${req.originalUrl}`);
+      }
+      res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+      res.setHeader(
+        "Content-Security-Policy",
+        [
+          "default-src 'self'",
+          "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com",
+          "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+          "img-src 'self' data: https://images.unsplash.com https://www.google-analytics.com",
+          "font-src 'self' https://fonts.gstatic.com",
+          "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com",
+          "frame-ancestors 'self'",
+          "base-uri 'self'",
+          "form-action 'self'",
+        ].join("; ")
+      );
+      next();
+    });
     app.use(compression());
     app.use(
       serveStatic(resolve("dist/client"), {

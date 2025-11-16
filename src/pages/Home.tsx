@@ -1,9 +1,10 @@
+import { Suspense, lazy } from "react";
 import { HeroSection } from "@/components/ui/3d-hero-section-boxes";
 import MissionSection from "@/components/home/Mission";
 import ServicesSection from "@/components/home/Services";
-import ConstructionClientsSection from "@/components/home/ConstructionClients";
-import RecentProjectsSection from "@/components/home/RecentProjects";
-import TestimonialsSection from "@/components/home/Testimonials";
+const ConstructionClientsSection = lazy(() => import("@/components/home/ConstructionClients"));
+const RecentProjectsSection = lazy(() => import("@/components/home/RecentProjects"));
+const TestimonialsSection = lazy(() => import("@/components/home/Testimonials"));
 import { Link } from "react-router-dom";
 
 const SeoOverviewSection = () => (
@@ -99,9 +100,15 @@ const Home = () => {
       <HeroSection />
       <MissionSection />
       <ServicesSection />
-      <ConstructionClientsSection />
-      <RecentProjectsSection />
-      <TestimonialsSection />
+      <Suspense fallback={<div className="py-16" aria-busy="true" />}>
+        <ConstructionClientsSection />
+      </Suspense>
+      <Suspense fallback={<div className="py-16" aria-busy="true" />}>
+        <RecentProjectsSection />
+      </Suspense>
+      <Suspense fallback={<div className="py-16" aria-busy="true" />}>
+        <TestimonialsSection />
+      </Suspense>
       <SeoOverviewSection />
     </>
   );

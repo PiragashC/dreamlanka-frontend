@@ -32,7 +32,7 @@ const Contact = () => {
       icon: Mail,
       headline: "Write to us",
       description: "Share drawings, RFPs, or project briefs and we’ll respond within one business day.",
-      value: "hello@buildoraengineers.com",
+      value: "contact@buildoraengineers.com",
       action: "Email us",
     },
     {

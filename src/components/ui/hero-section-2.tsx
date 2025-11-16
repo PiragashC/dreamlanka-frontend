@@ -135,7 +135,15 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             <motion.header className="mb-12" variants={itemVariants}>
               {logo && (
                 <div className="flex items-center">
-                  <img src={logo.url} alt={logo.alt} className="mr-3 h-8" />
+                  <img
+                    src={logo.url}
+                    alt={logo.alt}
+                    className="mr-3 h-8"
+                    loading="lazy"
+                    decoding="async"
+                    width="32"
+                    height="32"
+                  />
                   <div>
                     {logo.text && (
                       <p className="text-lg font-bold text-foreground">
