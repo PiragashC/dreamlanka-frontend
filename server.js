@@ -43,7 +43,7 @@ async function startServer() {
           "default-src 'self'",
           "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com",
           "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-          "img-src 'self' data: https://images.unsplash.com https://www.google-analytics.com",
+          "img-src 'self' data: https://images.unsplash.com https://www.google-analytics.com https://placehold.co https://framerusercontent.com",
           "font-src 'self' https://fonts.gstatic.com",
           "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com",
           "frame-ancestors 'self'",
