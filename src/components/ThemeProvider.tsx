@@ -18,6 +18,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>({
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   useEffect(() => {
+    if (typeof window === "undefined") return;
     const root = window.document.documentElement;
     root.classList.remove("dark");
     root.classList.add("light");

@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import crypto from "node:crypto";
 import express from "express";
 import compression from "compression";
 import serveStatic from "serve-static";
@@ -31,15 +30,13 @@ async function startServer() {
       appType: "custom",
     });
     app.use(vite.middlewares);
-    // Generate nonce for dev mode too
+    // Set CSP for dev mode (using hash for inline script)
     app.use((req, res, next) => {
-      const nonce = Buffer.from(crypto.randomBytes(16)).toString("base64");
-      res.locals.nonce = nonce;
       res.setHeader(
         "Content-Security-Policy",
         [
           "default-src 'self'",
-          `script-src 'self' 'nonce-${nonce}' https://www.googletagmanager.com https://www.google-analytics.com`,
+          `script-src 'self' 'sha256-eIoiZx1z+daMhxqt6JWedlRfaVOS+kbisFjiPmgM7OE=' https://www.googletagmanager.com https://www.google-analytics.com`,
           "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
           "img-src 'self' data: https://images.unsplash.com https://www.google-analytics.com https://placehold.co https://framerusercontent.com",
           "font-src 'self' https://fonts.gstatic.com",
@@ -58,16 +55,11 @@ async function startServer() {
         return res.redirect(301, `https://${CANONICAL_HOST}${req.originalUrl}`);
       }
       res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
-      
-      // Generate nonce for inline scripts
-      const nonce = Buffer.from(crypto.randomBytes(16)).toString("base64");
-      res.locals.nonce = nonce;
-      
       res.setHeader(
         "Content-Security-Policy",
         [
           "default-src 'self'",
-          `script-src 'self' 'nonce-${nonce}' https://www.googletagmanager.com https://www.google-analytics.com`,
+          `script-src 'self' 'sha256-eIoiZx1z+daMhxqt6JWedlRfaVOS+kbisFjiPmgM7OE=' https://www.googletagmanager.com https://www.google-analytics.com`,
           "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
           "img-src 'self' data: https://images.unsplash.com https://www.google-analytics.com https://placehold.co https://framerusercontent.com",
           "font-src 'self' https://fonts.gstatic.com",
@@ -109,13 +101,7 @@ async function startServer() {
         template = await vite.transformIndexHtml(url, template);
         render = (await vite.ssrLoadModule("/src/entry-server.tsx")).render;
         
-        // Inject nonce into inline script tags for dev mode (canonical redirect script)
-        if (res.locals.nonce) {
-          template = template.replace(
-            /<script>\s*\(function\s*\(\)\s*\{/s,
-            `<script nonce="${res.locals.nonce}">\n      (function () {`
-          );
-        }
+        // No need to inject nonce - using hash in CSP instead
       } else {
         const templatePath = resolve("dist/client/index.html");
         template = fs.readFileSync(templatePath, "utf-8");
@@ -126,13 +112,7 @@ async function startServer() {
       const appHtml = await render(url);
       let html = template.replace(`<!--app-html-->`, appHtml);
 
-      // Inject nonce into inline script tags (for production, dev mode already handled above)
-      if (isProd && res.locals.nonce) {
-        html = html.replace(
-          /<script>\s*\(function\s*\(\)\s*\{/s,
-          `<script nonce="${res.locals.nonce}">\n      (function () {`
-        );
-      }
+      // No need to inject nonce - using hash in CSP instead
 
       res
         .status(200)

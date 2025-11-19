@@ -25,7 +25,8 @@ const app = (
 );
 
 // Check if we should hydrate (SSR) or render fresh (CSR)
-const shouldHydrate = container.hasChildNodes() && container.children.length > 0;
+// More lenient check - just see if there's any content
+const shouldHydrate = container.innerHTML.trim().length > 0;
 
 if (shouldHydrate) {
   try {

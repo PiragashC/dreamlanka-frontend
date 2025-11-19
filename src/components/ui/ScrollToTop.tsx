@@ -41,6 +41,8 @@ const ScrollTopButton = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    
     const toggleVisibility = () => {
       setVisible(window.pageYOffset > 400);
     };
