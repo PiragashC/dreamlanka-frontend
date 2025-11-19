@@ -1,6 +1,7 @@
 declare global {
   interface Window {
     dataLayer: unknown[];
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -24,6 +25,7 @@ const appendScript = () => {
 
 export const initAnalytics = () => {
   if (!GA_ID || typeof window === "undefined") {
+    console.warn("Google Analytics: VITE_GA_MEASUREMENT_ID not set");
     return;
   }
 
@@ -34,18 +36,27 @@ export const initAnalytics = () => {
     window.dataLayer.push(args);
   }
 
+  // Make gtag available globally
+  window.gtag = gtag;
+
   gtag("js", new Date());
   gtag("config", GA_ID, {
     anonymize_ip: true,
+    send_page_view: false, // We'll send page views manually for SPA
   });
 };
 
-export const reportPageView = () => {
-  if (!GA_ID || typeof window === "undefined" || !window.dataLayer) {
+export const reportPageView = (path?: string) => {
+  if (!GA_ID || typeof window === "undefined" || !window.gtag) {
     return;
   }
 
-  window.dataLayer.push(["event", "page_view"]);
+  const pagePath = path || window.location.pathname + window.location.search;
+
+  window.gtag("config", GA_ID, {
+    page_path: pagePath,
+    page_title: document.title,
+  });
 };
 
 
