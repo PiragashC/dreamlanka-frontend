@@ -36,7 +36,7 @@ async function startServer() {
         "Content-Security-Policy",
         [
           "default-src 'self'",
-          `script-src 'self' 'sha256-eIoiZx1z+daMhxqt6JWedlRfaVOS+kbisFjiPmgM7OE=' https://www.googletagmanager.com https://www.google-analytics.com`,
+          `script-src 'self' 'unsafe-inline' 'sha256-eIoiZx1z+daMhxqt6JWedlRfaVOS+kbisFjiPmgM7OE=' 'sha256-shadRLjg5fE9Z2WM7AL6VBV8XxTTTaDJes8nMsaa9ZU=' https://www.googletagmanager.com https://www.google-analytics.com`,
           "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
           "img-src 'self' data: https://images.unsplash.com https://www.google-analytics.com https://placehold.co https://framerusercontent.com",
           "font-src 'self' https://fonts.gstatic.com",
@@ -59,7 +59,7 @@ async function startServer() {
         "Content-Security-Policy",
         [
           "default-src 'self'",
-          `script-src 'self' 'sha256-eIoiZx1z+daMhxqt6JWedlRfaVOS+kbisFjiPmgM7OE=' https://www.googletagmanager.com https://www.google-analytics.com`,
+          `script-src 'self' 'unsafe-inline' 'sha256-eIoiZx1z+daMhxqt6JWedlRfaVOS+kbisFjiPmgM7OE=' 'sha256-shadRLjg5fE9Z2WM7AL6VBV8XxTTTaDJes8nMsaa9ZU=' https://www.googletagmanager.com https://www.google-analytics.com`,
           "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
           "img-src 'self' data: https://images.unsplash.com https://www.google-analytics.com https://placehold.co https://framerusercontent.com",
           "font-src 'self' https://fonts.gstatic.com",
