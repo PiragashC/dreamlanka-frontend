@@ -34,12 +34,18 @@ const ROUTE_LOADER_MIN_DURATION = 600;
 
 const App = () => {
   const location = useLocation();
-  const [isRouteLoading, setIsRouteLoading] = useState(() =>
-    typeof window === "undefined" ? false : true
-  );
+  // Initialize to false on both server and client to prevent hydration mismatch
+  const [isRouteLoading, setIsRouteLoading] = useState(false);
   const loaderTimeoutRef = useRef<number>();
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
+    // Skip loader on initial mount (SSR already rendered)
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
     if (loaderTimeoutRef.current) {
       window.clearTimeout(loaderTimeoutRef.current);
     }
