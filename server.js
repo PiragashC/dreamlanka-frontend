@@ -78,6 +78,12 @@ async function startServer() {
         setHeaders(res, filePath) {
           if (filePath.endsWith(".html")) {
             res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
+          } else if (filePath.endsWith(".webmanifest")) {
+            res.setHeader("Content-Type", "application/manifest+json");
+            res.setHeader("Cache-Control", "public, max-age=86400");
+          } else if (filePath.endsWith(".ico")) {
+            res.setHeader("Content-Type", "image/x-icon");
+            res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
           } else {
             res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
           }
