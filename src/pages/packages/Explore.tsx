@@ -26,7 +26,7 @@ const caseStudies = [
     summary:
       "Turnkey delivery of chilled warehouses, cross-dock terminals, and smart yard integration using Buildora’s milestone governance package.",
     outcomes: ["Live digital twin", "24/7 operations readiness", "Operational savings within first quarter"],
-    image: "https://images.unsplash.com/photo-1541976076758-75c6b402aa76?auto=format&fit=crop&w=1200&q=80",
+    image: "/packages/global-foods-logistics.jpg",
   },
 ];
 

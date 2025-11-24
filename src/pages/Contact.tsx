@@ -25,7 +25,7 @@ const Contact = () => {
       icon: PhoneCall,
       headline: "Talk to our team",
       description: "Connect directly with a project strategist for immediate support.",
-      value: "+94 77 123 4567",
+      value: "077 074 8309",
       action: "Call now",
     },
     {
@@ -45,8 +45,8 @@ const Contact = () => {
   ];
 
   const officeHours = [
-    { label: "Office", value: "Buildora Engineers, KKS Road, Jaffna, Sri Lanka" },
-    { label: "Hours", value: "Mon – Fri: 8:00 AM – 6:00 PM" },
+    { label: "Office", value: "41/1 Eachchamoddai Road, Jaffna, Sri Lanka" },
+    { label: "Hours", value: "Mon – Sat: 9:00 AM – 5:30 PM" },
     { label: "Emergency support", value: "24/7 for active projects" },
   ];
 
@@ -189,7 +189,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-foreground">Primary office</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      Buildora Engineers, KKS Road, Nallur, Jaffna 40000, Sri Lanka
+                      41/1 Eachchamoddai Road, Jaffna, Sri Lanka
                     </p>
                   </div>
                 </div>
@@ -246,23 +246,24 @@ const Contact = () => {
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary" />
-                  Buildora Engineers, KKS Road, Nallur, Jaffna 40000, Sri Lanka
+                  41/1 Eachchamoddai Road, Jaffna, Sri Lanka
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Clock className="h-5 w-5 text-primary" />
-                  Dedicated client success leads provide 24/7 coverage during active construction.
+                  Mon – Sat: 9:00 AM – 5:30 PM
                 </div>
               </div>
             </div>
 
             <div className="overflow-hidden rounded-3xl border border-border/60 bg-card/80 shadow-lg shadow-primary/5">
               <iframe
-                title="Buildora Engineers Jaffna"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.1013796964636!2d80.0210!3d9.6706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe553a858d8d81%3A0x9021b7b9c7403817!2sJaffna%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1730790000000!5m2!1sen!2slk"
-                className="h-[360px] w-full"
+                title="Buildora Engineers Jaffna Office Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.1013796964636!2d80.0169!3d9.6650!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe553a858d8d81%3A0x9021b7b9c7403817!2sEachchamoddai%20Rd%2C%20Jaffna%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1730790000000!5m2!1sen!2slk"
+                className="h-[360px] w-full border-0"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                aria-label="Buildora Engineers office location map"
               ></iframe>
             </div>
           </div>

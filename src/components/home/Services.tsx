@@ -27,19 +27,19 @@ const Services = () => {
           </div>
           {(() => {
             const images: ImageSet = {
-              alt: "Construction workflow",
+              alt: "Construction workflow and project delivery process",
               step1img1:
                 "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1740&auto=format&fit=crop",
               step1img2:
                 "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1740&auto=format&fit=crop",
               step2img1:
-                "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1661&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1740&auto=format&fit=crop",
               step2img2:
-                "https://images.unsplash.com/photo-1581091012184-7c54d6896a52?q=80&w=1674&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1740&auto=format&fit=crop",
               step3img:
-                "https://images.unsplash.com/photo-1517089596392-fb9a9033e05a?q=80&w=1740&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1740&auto=format&fit=crop",
               step4img:
-                "https://images.unsplash.com/photo-1581091215367-59ab6d234ca3?q=80&w=1742&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1740&auto=format&fit=crop",
             };
             return <FeatureCarousel image={images} />;
           })()}

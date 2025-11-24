@@ -4,22 +4,22 @@ const architectureShots = [
   {
     title: "Skyline terrace tower",
     location: "Colombo Port City",
-    image: "https://images.unsplash.com/photo-1496150458551-140441714f8e?auto=format&fit=crop&w=1600&q=80",
+    image: "/resources/gallery/architecture-01.jpg",
   },
   {
     title: "Civic cultural pavilion",
     location: "Kandy",
-    image: "https://images.unsplash.com/photo-1510333337682-fdd0eba357a5?auto=format&fit=crop&w=1600&q=80",
+    image: "/resources/gallery/architecture-02.jpg",
   },
   {
     title: "Seaside hospitality villa",
     location: "Galle Coast",
-    image: "https://images.unsplash.com/photo-1505692794403-34cb57b9dbad?auto=format&fit=crop&w=1600&q=80",
+    image: "/resources/gallery/architecture-03.jpg",
   },
   {
     title: "Innovation tech hub",
     location: "Malabe",
-    image: "https://images.unsplash.com/photo-1465800872432-83aa85a36a1c?auto=format&fit=crop&w=1600&q=80",
+    image: "/resources/gallery/architecture-04.jpg",
   },
   {
     title: "Urban student residences",

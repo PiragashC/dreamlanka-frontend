@@ -11,7 +11,7 @@ const deliverables = [
     title: "BIM-ready drawings",
     description:
       "Coordinated architectural, structural, and MEP models with clash detection reports ready for fabrication and site deployment.",
-    image: "https://images.unsplash.com/photo-1550051724-1e96d32e8f02?auto=format&fit=crop&w=1200&q=80",
+    image: "/packages/bim-ready-drawings.jpg",
   },
   {
     title: "Execution playbook",

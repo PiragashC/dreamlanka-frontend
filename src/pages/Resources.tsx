@@ -8,7 +8,7 @@ const galleryImages = [
     label: "Civic atrium concept",
   },
   {
-    src: "https://images.unsplash.com/photo-1613483972373-d6f5f08d0557?auto=format&fit=crop&w=1200&q=80",
+    src: "/resources/mixed-use-lobby.jpg",
     label: "Mixed-use lobby",
   },
   {

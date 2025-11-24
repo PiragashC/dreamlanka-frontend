@@ -577,8 +577,8 @@ const Projects = () => {
                   </div>
 
                   {heroProject.testimonial && (
-                    <blockquote className="rounded-2xl border border-primary/20 bg-primary/10 p-6 text-left text-primary-foreground">
-                      <p className="text-sm italic leading-relaxed">
+                    <blockquote className="rounded-2xl border border-primary/30 bg-primary/5 p-6 text-left">
+                      <p className="text-sm italic leading-relaxed text-foreground">
                         “{heroProject.testimonial.quote}”
                       </p>
                       <footer className="mt-4 text-xs uppercase tracking-wide text-primary">

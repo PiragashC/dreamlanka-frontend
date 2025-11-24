@@ -83,7 +83,7 @@ function ConstructionHoverFooter() {
       {
         Icon: Phone,
         text: t("footer.contact.phone"),
-        href: "tel:+94214567890",
+        href: "tel:+94770748309",
       },
       {
         Icon: MapPin,

@@ -121,13 +121,13 @@ const NavigationComponent = () => {
                       <ProductItem
                         title="About Buildora Engineers"
                         href="/company/about"
-                        src="https://images.unsplash.com/photo-1529429617124-aee0014819be?auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80"
                         description="Discover our origins, guiding principles, and delivery ethos."
                       />
                       <ProductItem
                         title="Join Buildora"
                         href="/company/join"
-                        src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80"
                         description="Become part of our specialist network or delivery teams."
                       />
                     </>
@@ -137,13 +137,13 @@ const NavigationComponent = () => {
                       <ProductItem
                         title="Sample Deliverables"
                         href="/packages/samples"
-                        src="https://images.unsplash.com/photo-1555580399-e7d0c8fb828b?auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
                         description="Preview drawings, schedules, and playbooks from each package."
                       />
                       <ProductItem
                         title="Investment Guidance"
                         href="/packages/rates"
-                        src="https://images.unsplash.com/photo-1521540216272-a50305cd4421?auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
                         description="Understand cost bands and inclusions tailored to your scope."
                       />
                     </>
@@ -153,14 +153,14 @@ const NavigationComponent = () => {
                       <ProductItem
                         title="Approval Playbook"
                         href="/resources/approvals"
-                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=600&q=80"
                         description="Step-by-step guidance through BOI, UDA, and CEA processes."
                       />
                       <ProductItem
                         title="Design Inspiration"
                         href="/resources/architecture-gallery"
-                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
-                        description="Explore Buildora’s architecture and interior concept gallery."
+                        src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=80"
+                        description="Explore Buildora's architecture and interior concept gallery."
                       />
                     </>
                   )}
