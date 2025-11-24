@@ -116,6 +116,35 @@ function ConstructionHoverFooter() {
             <p className="text-sm leading-relaxed text-foreground/70">
               {t("footer.brandDescription")}
             </p>
+            
+            {/* Powered by AuraSyntax */}
+            <div className="pt-4 border-t border-blue-100/30">
+              <div className="flex flex-col gap-2.5">
+                <span className="text-[0.7rem] font-medium uppercase tracking-wider text-foreground/40">
+                  Powered by
+                </span>
+                <div className="flex items-center gap-3 group">
+                  <img
+                    src="/aurasyntax-powered-by.jpeg"
+                    alt="AuraSyntax"
+                    className="h-8 w-auto opacity-85 transition-opacity duration-200 group-hover:opacity-100"
+                    width="120"
+                    height="50"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="flex flex-col leading-tight">
+                    <span className="text-sm font-semibold text-foreground/80">
+                      AuraSyntax
+                    </span>
+                    <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-foreground/50">
+                      Craft the Logic
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="flex space-x-3 pt-2">
               {SOCIAL_LINKS.map(({ Icon, label, href }) => (
                 <a
