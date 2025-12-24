@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const toAbs = (p) => path.resolve(__dirname, p);
 
-const template = fs.readFileSync(toAbs('dist/client/index.html'), 'utf-8');
+const template = fs.readFileSync(toAbs('dist/index.html'), 'utf-8');
 const { render } = await import('./dist/server/entry-server.js');
 
 // Automatically extract routes from App.tsx
@@ -30,13 +30,13 @@ if (!routesToPrerender.includes('/404')) routesToPrerender.push('/404');
 
             let finalPath;
             if (url === '/') {
-                finalPath = toAbs('dist/client/index.html');
+                finalPath = toAbs('dist/index.html');
             } else if (url === '/404' || url === '404') {
-                finalPath = toAbs('dist/client/404.html');
+                finalPath = toAbs('dist/404.html');
             } else {
                 // Ensure path starts with / and remove trailing / for consistency
                 const cleanUrl = url.startsWith('/') ? url : `/${url}`;
-                finalPath = toAbs(`dist/client${cleanUrl}/index.html`);
+                finalPath = toAbs(`dist${cleanUrl}/index.html`);
             }
 
             const dir = path.dirname(finalPath);
