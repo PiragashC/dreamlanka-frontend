@@ -106,7 +106,7 @@ async function startServer() {
         lastModified = fs.statSync(templatePath).mtime.toUTCString();
         template = await vite.transformIndexHtml(url, template);
         render = (await vite.ssrLoadModule("/src/entry-server.tsx")).render;
-        
+
         // No need to inject nonce - using hash in CSP instead
       } else {
         const templatePath = resolve("dist/client/index.html");
@@ -136,11 +136,24 @@ async function startServer() {
     }
   });
 
-  const port = process.env.PORT || 4173;
-  app.listen(port, () => {
-    console.log(`SSR server running at http://localhost:${port}`);
+  return app;
+}
+
+const appPromise = startServer();
+
+// Handle local running
+if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
+  appPromise.then(app => {
+    const port = process.env.PORT || 4173;
+    app.listen(port, () => {
+      console.log(`SSR server running at http://localhost:${port}`);
+    });
   });
 }
 
-startServer();
+// Vercel entry point
+export default async (req, res) => {
+  const app = await appPromise;
+  app(req, res);
+};
 
